@@ -10,15 +10,14 @@ export function Nav({ githubUrl }: NavProps) {
       <div className="container-main flex items-center justify-between h-16">
         <div className="flex items-center gap-8">
           <NavLink
-            to="/"
+            to="/home"
             className="font-fraunces font-semibold text-xl text-navy no-underline transition-colors hover:text-orange"
           >
             OpenContext
           </NavLink>
           <div className="flex gap-6 font-mono text-sm">
             <NavLink
-              to="/"
-              end
+              to="/home"
               className={({ isActive }) =>
                 `no-underline transition-colors hover:text-orange ${isActive ? 'text-orange font-medium' : 'text-muted'}`
               }

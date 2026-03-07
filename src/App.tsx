@@ -1,4 +1,4 @@
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route, Navigate } from 'react-router-dom'
 import { Nav } from './components/Nav'
 import { Hero } from './components/Hero'
 import { HowItWorks } from './components/HowItWorks'
@@ -31,7 +31,8 @@ function App() {
     <main className="min-h-screen flex flex-col">
       <Nav githubUrl={GITHUB_URL} />
       <Routes>
-        <Route path="/" element={<MarketingPage />} />
+        <Route path="/" element={<Navigate to="/home" replace />} />
+        <Route path="/home" element={<MarketingPage />} />
         <Route path="/how-it-works" element={<DocumentationPage />} />
       </Routes>
       <Footer githubUrl={GITHUB_URL} />
