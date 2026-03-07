@@ -32,7 +32,7 @@ function App() {
       <Nav githubUrl={GITHUB_URL} />
       <Routes>
         <Route path="/" element={<MarketingPage />} />
-        <Route path="/documentation" element={<DocumentationPage />} />
+        <Route path="/how-it-works" element={<DocumentationPage />} />
       </Routes>
       <Footer githubUrl={GITHUB_URL} />
     </main>

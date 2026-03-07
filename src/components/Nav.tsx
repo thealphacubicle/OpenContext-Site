@@ -26,7 +26,7 @@ export function Nav({ githubUrl }: NavProps) {
               Home
             </NavLink>
             <NavLink
-              to="/documentation"
+              to="/how-it-works"
               className={({ isActive }) =>
                 `no-underline transition-colors hover:text-orange ${isActive ? 'text-orange font-medium' : 'text-muted'}`
               }
