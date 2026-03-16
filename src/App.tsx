@@ -9,6 +9,7 @@ import { Vision } from './components/Vision'
 import { Impact } from './components/Impact'
 import { Footer } from './components/Footer'
 import { DocumentationPage } from './pages/DocumentationPage'
+import { McpConnectionPage } from './pages/McpConnectionPage'
 
 const GITHUB_URL = 'https://github.com/thealphacubicle/OpenContext'
 
@@ -34,6 +35,7 @@ function App() {
         <Route path="/" element={<Navigate to="/home" replace />} />
         <Route path="/home" element={<MarketingPage />} />
         <Route path="/how-it-works" element={<DocumentationPage />} />
+        <Route path="/connect" element={<McpConnectionPage />} />
       </Routes>
       <Footer githubUrl={GITHUB_URL} />
     </main>
