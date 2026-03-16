@@ -32,6 +32,14 @@ export function Nav({ githubUrl }: NavProps) {
             >
               How It Works
             </NavLink>
+            <NavLink
+              to="/connect"
+              className={({ isActive }) =>
+                `no-underline transition-colors hover:text-orange ${isActive ? 'text-orange font-medium' : 'text-muted'}`
+              }
+            >
+              Connect
+            </NavLink>
           </div>
         </div>
         <a
