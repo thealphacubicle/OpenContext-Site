@@ -4,7 +4,7 @@ interface HeroProps {
 
 export function Hero({ githubUrl }: HeroProps) {
   return (
-    <section className="relative min-h-[90vh] flex flex-col items-center py-24 md:py-32 bg-grid overflow-hidden">
+    <section className="relative min-h-[70vh] md:min-h-[90vh] flex flex-col items-center py-16 md:py-24 lg:py-32 bg-grid overflow-hidden">
       {/* Radial orange glow at top center */}
       <div
         className="pointer-events-none absolute inset-0"
@@ -52,7 +52,7 @@ export function Hero({ githubUrl }: HeroProps) {
             Open Source MCP Framework · Civic Infrastructure
           </p>
 
-          <h1 className="reveal reveal-delay-1 font-fraunces text-5xl md:text-7xl lg:text-8xl font-light text-white leading-[1.05] mb-6 animate-fade-up-delay-1">
+          <h1 className="reveal reveal-delay-1 font-fraunces text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-light text-white leading-[1.05] mb-6 animate-fade-up-delay-1">
             AI that speaks your city's{' '}
             <em className="font-fraunces italic text-gradient">infrastructure</em>
           </h1>

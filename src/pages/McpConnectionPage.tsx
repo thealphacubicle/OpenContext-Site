@@ -28,7 +28,7 @@ const steps = [
     long: 'Once you have your fork, download it to your computer and run three commands to install everything OpenContext needs to run. This takes about two minutes on a normal internet connection.',
     content: (
       <CodeWindow title="Terminal" variant="terminal">
-        {`$ git clone https://github.com/<your-username>/OpenContext.git\n$ cd OpenContext\n$ pip install -e ".[cli]"`}
+        {`$ git clone https://github.com/thealphacubicle/OpenContext.git\n$ cd OpenContext\n$ pip install -e ".[cli]"`}
       </CodeWindow>
     ),
   },

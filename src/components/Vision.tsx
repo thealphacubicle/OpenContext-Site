@@ -2,35 +2,35 @@ export function Vision() {
   return (
     <section
       id="vision"
-      className="reveal py-20 md:py-28 border-t border-white/5"
+      className="reveal py-12 md:py-20 lg:py-28 border-t border-white/5"
       style={{ backgroundColor: '#040404' }}
     >
       <div className="section-inner">
         <div className="flex flex-col md:flex-row gap-12 md:gap-16 items-center">
           {/* Left column: text */}
-          <div className="flex-1">
+          <div className="flex-1 min-w-0">
             <p className="reveal font-mono text-xs uppercase tracking-widest text-[#ff6b2b] mb-4">
               The Vision
             </p>
-            <h2 className="reveal reveal-delay-1 font-fraunces text-3xl md:text-5xl font-light text-white leading-tight mb-8">
+            <h2 className="reveal reveal-delay-1 font-fraunces text-2xl sm:text-3xl md:text-5xl font-light text-white leading-tight mb-8">
               Every municipality&apos;s open data, findable and queryable by AI.
             </h2>
 
             {/* Stats row */}
-            <div className="reveal reveal-delay-2 flex flex-row gap-8">
+            <div className="reveal reveal-delay-2 flex flex-row gap-5 md:gap-8">
               <div>
-                <p className="font-fraunces text-3xl md:text-4xl font-light text-white mb-1">
+                <p className="font-fraunces text-2xl md:text-4xl font-light text-white mb-1">
                   183,000+
                 </p>
                 <p className="font-sans text-[#6b7280] text-sm">cities worldwide</p>
               </div>
               <div
-                className="w-px self-stretch"
+                className="w-px self-stretch shrink-0"
                 style={{ background: 'rgba(255,255,255,0.08)' }}
                 aria-hidden
               />
               <div>
-                <p className="font-fraunces text-3xl md:text-4xl font-light text-white mb-1">
+                <p className="font-fraunces text-2xl md:text-4xl font-light text-white mb-1">
                   Petabytes
                 </p>
                 <p className="font-sans text-[#6b7280] text-sm">of untapped civic data</p>
@@ -40,7 +40,7 @@ export function Vision() {
 
           {/* Right column: animated SVG network diagram */}
           <div
-            className="reveal reveal-delay-3 shrink-0 w-56 h-40 md:w-72 md:h-52"
+            className="reveal reveal-delay-3 shrink-0 w-48 h-36 md:w-72 md:h-52"
             aria-hidden
           >
             <svg
