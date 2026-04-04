@@ -57,14 +57,14 @@ function PlatformCard({
   }
 
   return (
-    <div className={`reveal ${delayClass} flip-card-container relative h-[120px]`}>
-      <div className="flip-card-inner relative h-full w-full">
-        {/* Front */}
-        <div
-          className="flip-card-front absolute inset-0 flex items-center justify-between border border-white/8 bg-[#0f0f0f] px-6 py-5 text-white"
-          style={{ borderRadius: '2px' }}
-        >
-          <span className="font-mono text-lg font-medium">{name}</span>
+    <>
+      {/* Mobile: static card with description always visible */}
+      <div
+        className={`reveal ${delayClass} md:hidden border border-white/8 bg-[#0f0f0f] px-5 py-4`}
+        style={{ borderRadius: '2px' }}
+      >
+        <div className="flex items-center justify-between mb-2">
+          <span className="font-mono text-base font-medium text-white">{name}</span>
           <span
             className="font-mono text-xs px-2 py-1 rounded-full"
             style={{
@@ -76,21 +76,47 @@ function PlatformCard({
             Live
           </span>
         </div>
-        {/* Back */}
-        <div
-          className="flip-card-back flip-card-front absolute inset-0 flex items-center overflow-y-auto px-6 py-5"
-          style={{
-            backgroundColor: '#ff6b2b',
-            borderRadius: '2px',
-            minHeight: 120,
-          }}
-        >
-          <p className="font-sans text-sm leading-relaxed text-black font-medium">
-            {description ?? ''}
-          </p>
+        {description && (
+          <p className="font-sans text-sm leading-relaxed text-[#9ca3af]">{description}</p>
+        )}
+      </div>
+
+      {/* Desktop: flip card on hover */}
+      <div className={`reveal ${delayClass} hidden md:block flip-card-container relative h-[120px]`}>
+        <div className="flip-card-inner relative h-full w-full">
+          {/* Front */}
+          <div
+            className="flip-card-front absolute inset-0 flex items-center justify-between border border-white/8 bg-[#0f0f0f] px-6 py-5 text-white"
+            style={{ borderRadius: '2px' }}
+          >
+            <span className="font-mono text-lg font-medium">{name}</span>
+            <span
+              className="font-mono text-xs px-2 py-1 rounded-full"
+              style={{
+                backgroundColor: 'rgba(34, 197, 94, 0.15)',
+                color: '#22c55e',
+                border: '1px solid rgba(34, 197, 94, 0.25)',
+              }}
+            >
+              Live
+            </span>
+          </div>
+          {/* Back */}
+          <div
+            className="flip-card-back flip-card-front absolute inset-0 flex items-center overflow-y-auto px-6 py-5"
+            style={{
+              backgroundColor: '#ff6b2b',
+              borderRadius: '2px',
+              minHeight: 120,
+            }}
+          >
+            <p className="font-sans text-sm leading-relaxed text-black font-medium">
+              {description ?? ''}
+            </p>
+          </div>
         </div>
       </div>
-    </div>
+    </>
   )
 }
 

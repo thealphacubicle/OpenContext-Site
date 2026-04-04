@@ -82,27 +82,6 @@ export function DocsHero({ githubUrl }: DocsHeroProps) {
             </a>
           </div>
 
-          {/* Stat pills */}
-          <div className="reveal reveal-delay-3 flex flex-wrap gap-2">
-            {[
-              'City of Boston · Primary Partner',
-              '3 built-in plugins',
-              '15 min avg setup',
-              'AWS · Serverless',
-            ].map((pill) => (
-              <span
-                key={pill}
-                className="font-mono text-xs text-[#9ca3af] px-3 py-1.5"
-                style={{
-                  border: '1px solid rgba(255,255,255,0.1)',
-                  backgroundColor: 'rgba(255,255,255,0.03)',
-                  borderRadius: '3px',
-                }}
-              >
-                {pill}
-              </span>
-            ))}
-          </div>
         </div>
       </div>
 
