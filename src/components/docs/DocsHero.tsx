@@ -3,47 +3,112 @@ interface DocsHeroProps {
 }
 
 export function DocsHero({ githubUrl }: DocsHeroProps) {
-  const quickstartUrl = `${githubUrl}#readme`
-
   return (
-    <section className="relative min-h-[80vh] flex flex-col items-center py-24 md:py-32">
-      <div className="section-inner flex-1 flex items-center">
+    <section className="relative min-h-[65vh] flex flex-col items-center py-16 md:py-20 bg-grid overflow-hidden">
+      {/* Radial glow */}
+      <div
+        className="pointer-events-none absolute inset-0"
+        style={{
+          background:
+            'radial-gradient(ellipse 80% 50% at 50% 0%, rgba(255,107,43,0.07) 0%, transparent 70%)',
+        }}
+        aria-hidden
+      />
+
+      {/* Orange orb */}
+      <div
+        className="orb-animate pointer-events-none absolute"
+        style={{
+          width: 420,
+          height: 420,
+          borderRadius: '50%',
+          background: 'rgba(255,107,43,0.10)',
+          filter: 'blur(80px)',
+          top: '-15%',
+          left: '-8%',
+        }}
+        aria-hidden
+      />
+
+      {/* Blue orb */}
+      <div
+        className="orb-animate-2 pointer-events-none absolute"
+        style={{
+          width: 340,
+          height: 340,
+          borderRadius: '50%',
+          background: 'rgba(59,130,246,0.07)',
+          filter: 'blur(80px)',
+          bottom: '5%',
+          right: '-8%',
+        }}
+        aria-hidden
+      />
+
+      <div className="section-inner flex-1 flex items-center relative z-10">
         <div className="max-w-xl">
-          <h1 className="font-fraunces text-3xl md:text-4xl lg:text-5xl font-light text-navy leading-tight mb-6 animate-fade-up">
-            Make civic data{' '}
-            <em className="font-fraunces italic text-orange">accessible</em> and{' '}
-            <em className="font-fraunces italic text-orange">contextualized</em>.
+          {/* Pill badge */}
+          <div className="mb-6 animate-fade-up">
+            <span
+              className="inline-block font-mono text-xs uppercase tracking-widest px-3 py-1.5"
+              style={{
+                color: '#ff6b2b',
+                border: '1px solid rgba(255,107,43,0.4)',
+                backgroundColor: 'rgba(255,107,43,0.08)',
+                borderRadius: '99px',
+              }}
+            >
+              Documentation
+            </span>
+          </div>
+
+          <h1 className="reveal font-fraunces text-4xl md:text-5xl lg:text-6xl font-light text-white leading-tight mb-6 animate-fade-up-delay-1">
+            Your city&apos;s data, accessible to AI in{' '}
+            <em className="font-fraunces italic text-[#ff6b2b]">15 minutes</em>.
           </h1>
-          <p className="font-sans text-muted text-lg leading-relaxed mb-10 animate-fade-up-delay-1">
-            OpenContext is an open-source MCP server framework that sits between AI assistants and your
-            government&apos;s civic data systems. Configure it once, and AI can query real datasets — open data
-            portals, 311 systems, transit feeds — through a standardized protocol layer.
+          <p className="reveal reveal-delay-1 font-sans text-[#9ca3af] text-lg leading-relaxed mb-10 animate-fade-up-delay-2">
+            OpenContext connects your government&apos;s open data to AI assistants — no custom code, no long
+            integrations. Fork, configure one file, deploy.
           </p>
-          <div className="flex flex-wrap gap-4 animate-fade-up-delay-2">
+          <div className="reveal reveal-delay-2 flex flex-wrap gap-4 mb-10 animate-fade-up-delay-2">
             <a
               href={githubUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block px-6 py-3 bg-navy text-cream text-sm font-mono font-medium uppercase tracking-wider no-underline transition-colors hover:bg-orange"
+              className="inline-block px-6 py-3 bg-[#ff6b2b] text-black text-sm font-mono font-medium uppercase tracking-wider no-underline transition-opacity hover:opacity-90"
               style={{ borderRadius: '2px' }}
             >
               Fork the repo
             </a>
-            <a
-              href={quickstartUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block px-6 py-3 border-2 border-navy text-navy text-sm font-mono font-medium uppercase tracking-wider no-underline transition-colors hover:bg-navy hover:text-cream"
-              style={{ borderRadius: '2px' }}
-            >
-              Read the quickstart
-            </a>
+          </div>
+
+          {/* Stat pills */}
+          <div className="reveal reveal-delay-3 flex flex-wrap gap-2">
+            {[
+              'City of Boston · Primary Partner',
+              '3 built-in plugins',
+              '15 min avg setup',
+              'AWS · Serverless',
+            ].map((pill) => (
+              <span
+                key={pill}
+                className="font-mono text-xs text-[#9ca3af] px-3 py-1.5"
+                style={{
+                  border: '1px solid rgba(255,255,255,0.1)',
+                  backgroundColor: 'rgba(255,255,255,0.03)',
+                  borderRadius: '3px',
+                }}
+              >
+                {pill}
+              </span>
+            ))}
           </div>
         </div>
       </div>
+
       <a
         href="#core-constraint"
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 text-navy/60 hover:text-orange transition-colors animate-pulse-bounce"
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 text-white/30 hover:text-[#ff6b2b] transition-colors animate-pulse-bounce"
         aria-label="Scroll to content"
       >
         <svg
