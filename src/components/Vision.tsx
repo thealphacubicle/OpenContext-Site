@@ -1,27 +1,94 @@
 export function Vision() {
   return (
-    <section id="vision" className="section-padding border-t border-[var(--border)]">
+    <section
+      id="vision"
+      className="reveal py-20 md:py-28 border-t border-white/5"
+      style={{ backgroundColor: '#040404' }}
+    >
       <div className="section-inner">
-        <h2 className="font-mono text-xl md:text-2xl font-medium uppercase tracking-wider text-orange mb-10">
-          The vision
-        </h2>
-        <div className="flex flex-col md:flex-row gap-10 md:gap-16 items-start md:items-center">
-          <p className="flex-1 font-sans text-muted text-lg leading-relaxed max-w-xl">
-            Empowering city governments to make their open data available in the agentic era — so every
-            municipality can put their data where AI assistants and residents can find it, query it, and act on it.
-          </p>
-          <div className="shrink-0 w-36 h-24 md:w-40 md:h-28 text-[var(--border)]" aria-hidden>
-            <svg viewBox="0 0 200 140" className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
-              <rect width="200" height="140" fill="none" stroke="currentColor" strokeWidth="1" opacity="0.6" />
-              <circle cx="100" cy="70" r="8" fill="currentColor" opacity="0.5" />
-              <circle cx="50" cy="40" r="4" fill="currentColor" opacity="0.4" />
-              <circle cx="150" cy="50" r="4" fill="currentColor" opacity="0.4" />
-              <circle cx="60" cy="100" r="4" fill="currentColor" opacity="0.4" />
-              <circle cx="140" cy="95" r="4" fill="currentColor" opacity="0.4" />
-              <line x1="100" y1="70" x2="50" y2="40" stroke="currentColor" strokeWidth="1" opacity="0.4" />
-              <line x1="100" y1="70" x2="150" y2="50" stroke="currentColor" strokeWidth="1" opacity="0.4" />
-              <line x1="100" y1="70" x2="60" y2="100" stroke="currentColor" strokeWidth="1" opacity="0.4" />
-              <line x1="100" y1="70" x2="140" y2="95" stroke="currentColor" strokeWidth="1" opacity="0.4" />
+        <div className="flex flex-col md:flex-row gap-12 md:gap-16 items-center">
+          {/* Left column: text */}
+          <div className="flex-1">
+            <p className="reveal font-mono text-xs uppercase tracking-widest text-[#ff6b2b] mb-4">
+              The Vision
+            </p>
+            <h2 className="reveal reveal-delay-1 font-fraunces text-3xl md:text-5xl font-light text-white leading-tight mb-8">
+              Every municipality&apos;s open data, findable and queryable by AI.
+            </h2>
+
+            {/* Stats row */}
+            <div className="reveal reveal-delay-2 flex flex-row gap-8">
+              <div>
+                <p className="font-fraunces text-3xl md:text-4xl font-light text-white mb-1">
+                  183,000+
+                </p>
+                <p className="font-sans text-[#6b7280] text-sm">cities worldwide</p>
+              </div>
+              <div
+                className="w-px self-stretch"
+                style={{ background: 'rgba(255,255,255,0.08)' }}
+                aria-hidden
+              />
+              <div>
+                <p className="font-fraunces text-3xl md:text-4xl font-light text-white mb-1">
+                  Petabytes
+                </p>
+                <p className="font-sans text-[#6b7280] text-sm">of untapped civic data</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Right column: animated SVG network diagram */}
+          <div
+            className="reveal reveal-delay-3 shrink-0 w-56 h-40 md:w-72 md:h-52"
+            aria-hidden
+          >
+            <svg
+              viewBox="0 0 260 180"
+              className="w-full h-full"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              {/* Connecting lines */}
+              <line x1="130" y1="90" x2="50" y2="35" stroke="rgba(255,107,43,0.4)" strokeWidth="1" />
+              <line x1="130" y1="90" x2="210" y2="45" stroke="rgba(255,107,43,0.4)" strokeWidth="1" />
+              <line x1="130" y1="90" x2="55" y2="145" stroke="rgba(255,107,43,0.4)" strokeWidth="1" />
+              <line x1="130" y1="90" x2="205" y2="148" stroke="rgba(255,107,43,0.4)" strokeWidth="1" />
+              <line x1="130" y1="90" x2="130" y2="22" stroke="rgba(255,107,43,0.4)" strokeWidth="1" />
+              <line x1="130" y1="90" x2="22" y2="90" stroke="rgba(255,107,43,0.4)" strokeWidth="1" />
+
+              {/* Satellite nodes */}
+              <circle cx="50" cy="35" r="5" fill="#ffffff" opacity="0.35" />
+              <circle cx="210" cy="45" r="5" fill="#ffffff" opacity="0.35" />
+              <circle cx="55" cy="145" r="5" fill="#ffffff" opacity="0.35" />
+              <circle cx="205" cy="148" r="5" fill="#ffffff" opacity="0.35" />
+              <circle cx="130" cy="22" r="4" fill="#ffffff" opacity="0.25" />
+              <circle cx="22" cy="90" r="4" fill="#ffffff" opacity="0.25" />
+
+              {/* Pulsing rings on satellite nodes */}
+              <circle cx="50" cy="35" r="9" fill="none" stroke="rgba(255,107,43,0.2)" strokeWidth="1">
+                <animate attributeName="r" values="6;12;6" dur="3s" repeatCount="indefinite" />
+                <animate attributeName="opacity" values="0.4;0;0.4" dur="3s" repeatCount="indefinite" />
+              </circle>
+              <circle cx="210" cy="45" r="9" fill="none" stroke="rgba(255,107,43,0.2)" strokeWidth="1">
+                <animate attributeName="r" values="6;12;6" dur="3.8s" repeatCount="indefinite" />
+                <animate attributeName="opacity" values="0.4;0;0.4" dur="3.8s" repeatCount="indefinite" />
+              </circle>
+              <circle cx="55" cy="145" r="9" fill="none" stroke="rgba(255,107,43,0.2)" strokeWidth="1">
+                <animate attributeName="r" values="6;12;6" dur="2.7s" repeatCount="indefinite" />
+                <animate attributeName="opacity" values="0.4;0;0.4" dur="2.7s" repeatCount="indefinite" />
+              </circle>
+              <circle cx="205" cy="148" r="9" fill="none" stroke="rgba(255,107,43,0.2)" strokeWidth="1">
+                <animate attributeName="r" values="6;12;6" dur="4.2s" repeatCount="indefinite" />
+                <animate attributeName="opacity" values="0.4;0;0.4" dur="4.2s" repeatCount="indefinite" />
+              </circle>
+
+              {/* Central node with pulse-glow */}
+              <circle cx="130" cy="90" r="14" fill="rgba(255,107,43,0.15)" />
+              <circle cx="130" cy="90" r="14" fill="none" stroke="rgba(255,107,43,0.3)" strokeWidth="1">
+                <animate attributeName="r" values="14;22;14" dur="2.5s" repeatCount="indefinite" />
+                <animate attributeName="opacity" values="0.5;0;0.5" dur="2.5s" repeatCount="indefinite" />
+              </circle>
+              <circle cx="130" cy="90" r="8" fill="#ff6b2b" opacity="0.9" />
             </svg>
           </div>
         </div>

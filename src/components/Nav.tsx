@@ -6,12 +6,12 @@ interface NavProps {
 
 export function Nav({ githubUrl }: NavProps) {
   return (
-    <nav className="sticky top-0 z-50 bg-[var(--cream)] border-b border-[var(--border)]">
+    <nav className="sticky top-0 z-50 bg-[#050505] border-b border-white/5">
       <div className="container-main flex items-center justify-between h-16">
         <div className="flex items-center gap-8">
           <NavLink
             to="/home"
-            className="font-fraunces font-semibold text-xl text-navy no-underline transition-colors hover:text-orange"
+            className="font-fraunces font-semibold text-xl text-white no-underline transition-colors hover:text-orange"
           >
             OpenContext
           </NavLink>
@@ -19,7 +19,7 @@ export function Nav({ githubUrl }: NavProps) {
             <NavLink
               to="/home"
               className={({ isActive }) =>
-                `no-underline transition-colors hover:text-orange ${isActive ? 'text-orange font-medium' : 'text-muted'}`
+                `no-underline transition-colors hover:text-white ${isActive ? 'text-orange font-medium' : 'text-[#9ca3af]'}`
               }
             >
               Home
@@ -27,15 +27,15 @@ export function Nav({ githubUrl }: NavProps) {
             <NavLink
               to="/how-it-works"
               className={({ isActive }) =>
-                `no-underline transition-colors hover:text-orange ${isActive ? 'text-orange font-medium' : 'text-muted'}`
+                `no-underline transition-colors hover:text-white ${isActive ? 'text-orange font-medium' : 'text-[#9ca3af]'}`
               }
             >
-              How It Works
+              About OpenContext
             </NavLink>
             <NavLink
               to="/connect"
               className={({ isActive }) =>
-                `no-underline transition-colors hover:text-orange ${isActive ? 'text-orange font-medium' : 'text-muted'}`
+                `no-underline transition-colors hover:text-white ${isActive ? 'text-orange font-medium' : 'text-[#9ca3af]'}`
               }
             >
               Connect
@@ -46,9 +46,10 @@ export function Nav({ githubUrl }: NavProps) {
           href={githubUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="font-mono text-sm text-navy no-underline transition-colors hover:text-orange"
+          className="font-mono text-sm text-white no-underline border border-white/20 px-4 py-1.5 transition-colors hover:bg-white hover:text-black"
+          style={{ borderRadius: '2px' }}
         >
-          GitHub
+          View on GitHub
         </a>
       </div>
     </nav>

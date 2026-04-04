@@ -1,4 +1,11 @@
+import { useState } from 'react'
 import { CodeWindow } from './CodeWindow'
+
+const inlineCode = (s: string) => (
+  <code className="px-1.5 py-0.5 text-white" style={{ backgroundColor: '#1a1a1a', borderRadius: '2px' }}>
+    {s}
+  </code>
+)
 
 const initRequest = `{
   "jsonrpc": "2.0",
@@ -12,80 +19,123 @@ const initRequest = `{
 }`
 
 export function McpHttpSection() {
+  const [open, setOpen] = useState(false)
+
   return (
-    <section id="standard-http" className="section-padding border-t border-[var(--border)]">
+    <section id="standard-http" className="py-14 md:py-16 border-t border-white/5">
       <div className="section-inner">
-        <h2 className="font-mono text-xl md:text-2xl font-medium uppercase tracking-wider text-orange mb-6">
-          Standard HTTP
-        </h2>
-        <p className="font-sans text-muted text-base leading-relaxed mb-6 max-w-2xl">
-          MCP servers use the Streamable HTTP transport. You can connect from any HTTP client
-          — curl, Postman, or your own application — using JSON-RPC over HTTP POST. Get the
-          MCP endpoint URL from your MCP administrator or organization.
-        </p>
-
-        <div className="space-y-6 max-w-2xl">
-          <div>
-            <h3 className="font-fraunces font-semibold text-navy text-lg mb-2">Endpoint</h3>
-            <p className="font-sans text-muted text-sm mb-2">
-              Use the URL provided by your MCP administrator or organization. For example:
-            </p>
-            <CodeWindow title="URL" variant="editor">
-              https://your-org-mcp.example.com/mcp
-            </CodeWindow>
+        {/* Collapsible header */}
+        <button
+          type="button"
+          onClick={() => setOpen((v) => !v)}
+          className="w-full flex items-center justify-between px-5 py-4 text-left transition-colors hover:bg-white/[0.02] group"
+          style={{
+            border: '1px solid rgba(255,255,255,0.08)',
+            borderRadius: '3px',
+            background: open ? 'rgba(255,107,43,0.03)' : 'transparent',
+          }}
+          aria-expanded={open}
+        >
+          <div className="flex flex-col gap-1">
+            <span className="font-mono text-sm text-[#ff6b2b] uppercase tracking-widest">
+              For Developers
+            </span>
+            <span className="font-fraunces text-white text-lg font-light">
+              Standard HTTP Connection
+            </span>
+            <span className="font-sans text-xs text-[#6b7280]">
+              If you're connecting to an existing OpenContext server via HTTP — this section is for you.
+            </span>
           </div>
+          <span
+            className="flex-shrink-0 ml-6 w-8 h-8 flex items-center justify-center font-mono text-xl text-[#ff6b2b] transition-transform"
+            style={{
+              border: '1px solid rgba(255,107,43,0.25)',
+              borderRadius: '50%',
+              transform: open ? 'rotate(45deg)' : 'none',
+              transition: 'transform 0.25s ease',
+            }}
+            aria-hidden
+          >
+            +
+          </span>
+        </button>
 
-          <div>
-            <h3 className="font-fraunces font-semibold text-navy text-lg mb-2">Required headers</h3>
-            <ul className="font-sans text-muted text-sm space-y-1 list-disc list-inside">
-              <li>
-                <code className="bg-[var(--chip-muted)] px-1 rounded text-navy">Accept: application/json, text/event-stream</code>
-              </li>
-              <li>
-                <code className="bg-[var(--chip-muted)] px-1 rounded text-navy">MCP-Protocol-Version: 2025-03-26</code>
-              </li>
-              <li>
-                <code className="bg-[var(--chip-muted)] px-1 rounded text-navy">Content-Type: application/json</code>
-              </li>
-            </ul>
-          </div>
+        {/* Collapsible body */}
+        {open && (
+          <div className="animate-fade-up mt-6">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
+              {/* Left column — reference info */}
+              <div className="space-y-8">
+                <div>
+                  <h3 className="font-fraunces font-semibold text-white text-lg mb-2">Overview</h3>
+                  <p className="font-sans text-[#9ca3af] text-sm leading-relaxed">
+                    MCP servers use Streamable HTTP transport. Connect from any HTTP client — curl, Postman,
+                    or your own app — using JSON-RPC over HTTP POST. Get the endpoint URL from your MCP administrator.
+                  </p>
+                </div>
 
-          <div>
-            <h3 className="font-fraunces font-semibold text-navy text-lg mb-2">Initialize request</h3>
-            <p className="font-sans text-muted text-sm mb-2">
-              Send a JSON-RPC <code className="bg-[var(--chip-muted)] px-1 rounded text-navy">initialize</code> request to start a session:
-            </p>
-            <CodeWindow title="request.json" variant="editor">
-              {initRequest}
-            </CodeWindow>
-          </div>
+                <div>
+                  <h3 className="font-fraunces font-semibold text-white text-lg mb-3">Endpoint</h3>
+                  <CodeWindow title="URL" variant="editor">
+                    https://your-org-mcp.example.com/mcp
+                  </CodeWindow>
+                </div>
 
-          <div>
-            <h3 className="font-fraunces font-semibold text-navy text-lg mb-2">curl example</h3>
-            <p className="font-sans text-muted text-sm mb-2">
-              Replace <code className="bg-[var(--chip-muted)] px-1 rounded text-navy">YOUR_MCP_ENDPOINT_URL</code> with the URL from your MCP administrator:
-            </p>
-            <CodeWindow title="Terminal" variant="terminal">
+                <div>
+                  <h3 className="font-fraunces font-semibold text-white text-lg mb-3">Required headers</h3>
+                  <ul className="space-y-2">
+                    {[
+                      'Accept: application/json, text/event-stream',
+                      'MCP-Protocol-Version: 2025-03-26',
+                      'Content-Type: application/json',
+                    ].map((h) => (
+                      <li key={h} className="font-sans text-sm">
+                        {inlineCode(h)}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div>
+                  <h3 className="font-fraunces font-semibold text-white text-lg mb-2">Session management</h3>
+                  <p className="font-sans text-[#9ca3af] text-sm leading-relaxed">
+                    If the server returns an {inlineCode('Mcp-Session-Id')} header, include it on all subsequent
+                    requests. After initialization, send an {inlineCode('initialized')} notification, then use{' '}
+                    {inlineCode('tools/list')} and {inlineCode('tools/call')} to discover and invoke tools.
+                  </p>
+                </div>
+              </div>
+
+              {/* Right column — code examples */}
+              <div className="space-y-8">
+                <div>
+                  <h3 className="font-fraunces font-semibold text-white text-lg mb-2">Initialize request</h3>
+                  <p className="font-sans text-[#9ca3af] text-sm mb-2">
+                    Send a JSON-RPC {inlineCode('initialize')} request to start a session:
+                  </p>
+                  <CodeWindow title="request.json" variant="editor">
+                    {initRequest}
+                  </CodeWindow>
+                </div>
+
+                <div>
+                  <h3 className="font-fraunces font-semibold text-white text-lg mb-2">curl example</h3>
+                  <p className="font-sans text-[#9ca3af] text-sm mb-2">
+                    Replace {inlineCode('YOUR_MCP_ENDPOINT_URL')} with the URL from your administrator:
+                  </p>
+                  <CodeWindow title="Terminal" variant="terminal">
 {`$ curl -X POST "YOUR_MCP_ENDPOINT_URL" \\
   -H "Accept: application/json, text/event-stream" \\
   -H "MCP-Protocol-Version: 2025-03-26" \\
   -H "Content-Type: application/json" \\
   -d '{"jsonrpc":"2.0","id":1,"method":"initialize","params":{"protocolVersion":"2025-03-26","capabilities":{},"clientInfo":{"name":"http-client","version":"1.0.0"}}}'`}
-            </CodeWindow>
+                  </CodeWindow>
+                </div>
+              </div>
+            </div>
           </div>
-
-          <div>
-            <h3 className="font-fraunces font-semibold text-navy text-lg mb-2">Session management</h3>
-            <p className="font-sans text-muted text-sm leading-relaxed">
-              If the server returns an <code className="bg-[var(--chip-muted)] px-1 rounded text-navy">Mcp-Session-Id</code> header in the
-              response, include it on all subsequent requests. After initialization, send an{' '}
-              <code className="bg-[var(--chip-muted)] px-1 rounded text-navy">initialized</code> notification, then use{' '}
-              <code className="bg-[var(--chip-muted)] px-1 rounded text-navy">tools/list</code> and{' '}
-              <code className="bg-[var(--chip-muted)] px-1 rounded text-navy">tools/call</code> to discover and invoke tools. The server may
-              optionally use Server-Sent Events (SSE) for streaming responses.
-            </p>
-          </div>
-        </div>
+        )}
       </div>
     </section>
   )

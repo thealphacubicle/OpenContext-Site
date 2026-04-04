@@ -42,12 +42,6 @@ const docs = [
     internal: false,
   },
   {
-    title: 'Testing guide',
-    description: 'Run locally and validate your plugin before deploying.',
-    file: 'TESTING.md',
-    internal: false,
-  },
-  {
     title: 'FAQ',
     description: 'Common questions about OpenContext, MCP, and civic data integration.',
     file: 'FAQ.md',
@@ -61,26 +55,51 @@ export function DocumentationIndex({ githubUrl }: DocumentationIndexProps) {
     'file' in doc ? { ...doc, href: `${baseUrl}/${doc.file}`, internal: false } : doc
   )
 
+  const cardInner = (doc: (typeof docLinks)[number]) => (
+    <>
+      {/* Top-right orange accent dot — visible on hover */}
+      <span
+        className="absolute top-3 right-3 w-1 h-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+        style={{ backgroundColor: '#ff6b2b', borderRadius: '1px' }}
+        aria-hidden
+      />
+
+      <h3 className="font-fraunces font-semibold text-white text-lg mb-2 group-hover:text-[#ff6b2b] transition-colors pr-6">
+        {doc.title}
+      </h3>
+      <p className="font-sans text-[#9ca3af] text-[15px] leading-relaxed">{doc.description}</p>
+
+      {/* Right-arrow slides in on hover */}
+      <span
+        className="absolute right-5 top-1/2 -translate-y-1/2 font-mono text-[#ff6b2b] opacity-0 translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300"
+        aria-hidden
+      >
+        →
+      </span>
+    </>
+  )
+
+  const cardClass =
+    'reveal block relative min-h-[100px] p-6 border border-white/8 bg-[#0f0f0f] no-underline transition-all hover:border-[rgba(255,107,43,0.35)] hover:bg-[#111111] group'
+  const cardStyle = { borderRadius: '2px' } as const
+
   return (
-    <section className="section-padding border-t border-[var(--border)]">
+    <section className="section-padding border-t border-white/5">
       <div className="section-inner">
-        <h2 className="font-mono text-xl md:text-2xl font-medium uppercase tracking-wider text-orange mb-12">
+        <h2 className="reveal font-mono text-xl md:text-2xl font-medium uppercase tracking-wider text-[#ff6b2b] mb-8">
           Documentation
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {docLinks.map((doc) => {
-            const className =
-              'block p-6 border border-[var(--border)] no-underline transition-colors hover:border-orange hover:bg-[#faf8f5]'
-            const style = { borderRadius: '2px' } as const
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          {docLinks.map((doc, i) => {
+            const delayClass = `reveal-delay-${Math.min(i + 1, 3)}`
             return doc.internal ? (
               <Link
                 key={doc.title}
                 to={doc.href}
-                className={className}
-                style={style}
+                className={`${cardClass} ${delayClass}`}
+                style={cardStyle}
               >
-                <h3 className="font-fraunces font-semibold text-navy text-lg mb-2">{doc.title}</h3>
-                <p className="font-sans text-muted text-[15px] leading-relaxed">{doc.description}</p>
+                {cardInner(doc)}
               </Link>
             ) : (
               <a
@@ -88,11 +107,10 @@ export function DocumentationIndex({ githubUrl }: DocumentationIndexProps) {
                 href={doc.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={className}
-                style={style}
+                className={`${cardClass} ${delayClass}`}
+                style={cardStyle}
               >
-                <h3 className="font-fraunces font-semibold text-navy text-lg mb-2">{doc.title}</h3>
-                <p className="font-sans text-muted text-[15px] leading-relaxed">{doc.description}</p>
+                {cardInner(doc)}
               </a>
             )
           })}
