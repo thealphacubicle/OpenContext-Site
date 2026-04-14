@@ -11,7 +11,7 @@ export function McpConnectionHero() {
           height: '55vw',
           maxWidth: '700px',
           maxHeight: '700px',
-          background: 'radial-gradient(ellipse, rgba(255,107,43,0.12) 0%, transparent 70%)',
+          background: 'radial-gradient(ellipse, rgba(232,132,26,0.14) 0%, transparent 70%)',
           borderRadius: '50%',
           filter: 'blur(40px)',
         }}
@@ -26,7 +26,7 @@ export function McpConnectionHero() {
           height: '45vw',
           maxWidth: '600px',
           maxHeight: '600px',
-          background: 'radial-gradient(ellipse, rgba(255,107,43,0.07) 0%, transparent 70%)',
+          background: 'radial-gradient(ellipse, rgba(29,158,117,0.1) 0%, transparent 70%)',
           borderRadius: '50%',
           filter: 'blur(60px)',
         }}
@@ -38,7 +38,7 @@ export function McpConnectionHero() {
         className="pointer-events-none absolute inset-0"
         style={{
           background:
-            'radial-gradient(ellipse 70% 50% at 50% 0%, rgba(255,107,43,0.08) 0%, transparent 65%)',
+            'radial-gradient(ellipse 70% 50% at 50% 0%, rgba(232,132,26,0.1) 0%, transparent 65%)',
         }}
         aria-hidden
       />
@@ -49,21 +49,21 @@ export function McpConnectionHero() {
           <span
             className="inline-flex items-center gap-2.5 px-4 py-2 font-mono text-xs tracking-widest uppercase"
             style={{
-              border: '1px solid rgba(255,107,43,0.25)',
-              background: 'rgba(255,107,43,0.06)',
+              border: '1px solid rgba(232,132,26,0.35)',
+              background: 'rgba(232,132,26,0.1)',
               borderRadius: '100px',
-              color: '#ff6b2b',
+              color: '#E8841A',
             }}
           >
             {/* Pulsing dot */}
             <span className="relative flex items-center justify-center w-2 h-2">
               <span
                 className="animate-ping absolute inline-flex w-full h-full rounded-full"
-                style={{ backgroundColor: 'rgba(255,107,43,0.5)' }}
+                style={{ backgroundColor: 'rgba(29,158,117,0.5)' }}
               />
               <span
                 className="relative inline-flex rounded-full w-2 h-2"
-                style={{ backgroundColor: '#ff6b2b' }}
+                style={{ backgroundColor: '#1D9E75' }}
               />
             </span>
             Live in 15 minutes
@@ -103,7 +103,7 @@ export function McpConnectionHero() {
             rel="noopener noreferrer"
             className="btn-shine pulse-glow inline-flex items-center gap-2 px-7 py-3.5 font-sans font-semibold text-white text-sm transition-all"
             style={{
-              background: '#ff6b2b',
+              background: '#2D5A27',
               borderRadius: '3px',
               letterSpacing: '0.01em',
             }}
@@ -113,7 +113,7 @@ export function McpConnectionHero() {
           </a>
           <a
             href="#steps"
-            className="inline-flex items-center gap-2 px-7 py-3.5 font-sans font-semibold text-white text-sm transition-all hover:border-[rgba(255,107,43,0.5)] hover:text-[#ff6b2b]"
+            className="inline-flex items-center gap-2 px-7 py-3.5 font-sans font-semibold text-white text-sm transition-all hover:border-[rgba(29,158,117,0.5)] hover:text-[#1D9E75]"
             style={{
               border: '1px solid rgba(255,255,255,0.15)',
               borderRadius: '3px',

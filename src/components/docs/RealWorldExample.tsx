@@ -14,7 +14,7 @@ export function RealWorldExample({ githubUrl }: RealWorldExampleProps) {
   return (
     <section className="section-padding border-t border-white/5">
       <div className="section-inner">
-        <h2 className="reveal font-mono text-xl md:text-2xl font-medium uppercase tracking-wider text-[#ff6b2b] mb-8">
+        <h2 className="reveal font-mono text-xl md:text-2xl font-medium uppercase tracking-wider text-[#E8841A] mb-8">
           Real-world example
         </h2>
 
@@ -27,7 +27,7 @@ export function RealWorldExample({ githubUrl }: RealWorldExampleProps) {
             >
               <div className="flex items-center gap-2 mb-4">
                 <span className="text-lg" aria-hidden>&#127963;</span>
-                <span className="font-mono text-sm text-[#ff6b2b] font-medium uppercase tracking-wider">
+                <span className="font-mono text-sm text-[#E8841A] font-medium uppercase tracking-wider">
                   City of Boston
                 </span>
               </div>
@@ -39,7 +39,7 @@ export function RealWorldExample({ githubUrl }: RealWorldExampleProps) {
                 href={examplesUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block px-6 py-3 bg-[#ff6b2b] text-black text-sm font-mono font-medium uppercase tracking-wider no-underline transition-opacity hover:opacity-90"
+                className="inline-block px-6 py-3 bg-[#2D5A27] text-white text-sm font-mono font-medium uppercase tracking-wider no-underline transition-opacity hover:opacity-90"
                 style={{ borderRadius: '2px' }}
               >
                 View examples in repo
@@ -57,12 +57,12 @@ export function RealWorldExample({ githubUrl }: RealWorldExampleProps) {
                 <li
                   key={query}
                   className="flex items-start gap-3 border-l-2 pl-3"
-                  style={{ borderColor: 'rgba(255,107,43,0.3)' }}
+                  style={{ borderColor: 'rgba(29,158,117,0.35)' }}
                 >
                   {/* Orange question mark icon */}
                   <span
                     className="shrink-0 font-mono text-sm font-bold mt-px"
-                    style={{ color: '#ff6b2b' }}
+                    style={{ color: '#1D9E75' }}
                     aria-hidden
                   >
                     ?

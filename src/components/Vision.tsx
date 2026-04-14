@@ -9,7 +9,7 @@ export function Vision() {
         <div className="flex flex-col md:flex-row gap-12 md:gap-16 items-center">
           {/* Left column: text */}
           <div className="flex-1 min-w-0">
-            <p className="reveal font-mono text-xs uppercase tracking-widest text-[#ff6b2b] mb-4">
+            <p className="reveal font-mono text-xs uppercase tracking-widest text-[#E8841A] mb-4">
               The Vision
             </p>
             <h2 className="reveal reveal-delay-1 font-fraunces text-2xl sm:text-3xl md:text-5xl font-light text-white leading-tight mb-8">
@@ -49,12 +49,12 @@ export function Vision() {
               xmlns="http://www.w3.org/2000/svg"
             >
               {/* Connecting lines */}
-              <line x1="130" y1="90" x2="50" y2="35" stroke="rgba(255,107,43,0.4)" strokeWidth="1" />
-              <line x1="130" y1="90" x2="210" y2="45" stroke="rgba(255,107,43,0.4)" strokeWidth="1" />
-              <line x1="130" y1="90" x2="55" y2="145" stroke="rgba(255,107,43,0.4)" strokeWidth="1" />
-              <line x1="130" y1="90" x2="205" y2="148" stroke="rgba(255,107,43,0.4)" strokeWidth="1" />
-              <line x1="130" y1="90" x2="130" y2="22" stroke="rgba(255,107,43,0.4)" strokeWidth="1" />
-              <line x1="130" y1="90" x2="22" y2="90" stroke="rgba(255,107,43,0.4)" strokeWidth="1" />
+              <line x1="130" y1="90" x2="50" y2="35" stroke="rgba(29,158,117,0.45)" strokeWidth="1" />
+              <line x1="130" y1="90" x2="210" y2="45" stroke="rgba(29,158,117,0.45)" strokeWidth="1" />
+              <line x1="130" y1="90" x2="55" y2="145" stroke="rgba(29,158,117,0.45)" strokeWidth="1" />
+              <line x1="130" y1="90" x2="205" y2="148" stroke="rgba(29,158,117,0.45)" strokeWidth="1" />
+              <line x1="130" y1="90" x2="130" y2="22" stroke="rgba(29,158,117,0.45)" strokeWidth="1" />
+              <line x1="130" y1="90" x2="22" y2="90" stroke="rgba(29,158,117,0.45)" strokeWidth="1" />
 
               {/* Satellite nodes */}
               <circle cx="50" cy="35" r="5" fill="#ffffff" opacity="0.35" />
@@ -65,30 +65,30 @@ export function Vision() {
               <circle cx="22" cy="90" r="4" fill="#ffffff" opacity="0.25" />
 
               {/* Pulsing rings on satellite nodes */}
-              <circle cx="50" cy="35" r="9" fill="none" stroke="rgba(255,107,43,0.2)" strokeWidth="1">
+              <circle cx="50" cy="35" r="9" fill="none" stroke="rgba(232,132,26,0.25)" strokeWidth="1">
                 <animate attributeName="r" values="6;12;6" dur="3s" repeatCount="indefinite" />
                 <animate attributeName="opacity" values="0.4;0;0.4" dur="3s" repeatCount="indefinite" />
               </circle>
-              <circle cx="210" cy="45" r="9" fill="none" stroke="rgba(255,107,43,0.2)" strokeWidth="1">
+              <circle cx="210" cy="45" r="9" fill="none" stroke="rgba(232,132,26,0.25)" strokeWidth="1">
                 <animate attributeName="r" values="6;12;6" dur="3.8s" repeatCount="indefinite" />
                 <animate attributeName="opacity" values="0.4;0;0.4" dur="3.8s" repeatCount="indefinite" />
               </circle>
-              <circle cx="55" cy="145" r="9" fill="none" stroke="rgba(255,107,43,0.2)" strokeWidth="1">
+              <circle cx="55" cy="145" r="9" fill="none" stroke="rgba(232,132,26,0.25)" strokeWidth="1">
                 <animate attributeName="r" values="6;12;6" dur="2.7s" repeatCount="indefinite" />
                 <animate attributeName="opacity" values="0.4;0;0.4" dur="2.7s" repeatCount="indefinite" />
               </circle>
-              <circle cx="205" cy="148" r="9" fill="none" stroke="rgba(255,107,43,0.2)" strokeWidth="1">
+              <circle cx="205" cy="148" r="9" fill="none" stroke="rgba(232,132,26,0.25)" strokeWidth="1">
                 <animate attributeName="r" values="6;12;6" dur="4.2s" repeatCount="indefinite" />
                 <animate attributeName="opacity" values="0.4;0;0.4" dur="4.2s" repeatCount="indefinite" />
               </circle>
 
               {/* Central node with pulse-glow */}
-              <circle cx="130" cy="90" r="14" fill="rgba(255,107,43,0.15)" />
-              <circle cx="130" cy="90" r="14" fill="none" stroke="rgba(255,107,43,0.3)" strokeWidth="1">
+              <circle cx="130" cy="90" r="14" fill="rgba(45,90,39,0.2)" />
+              <circle cx="130" cy="90" r="14" fill="none" stroke="rgba(45,90,39,0.4)" strokeWidth="1">
                 <animate attributeName="r" values="14;22;14" dur="2.5s" repeatCount="indefinite" />
                 <animate attributeName="opacity" values="0.5;0;0.5" dur="2.5s" repeatCount="indefinite" />
               </circle>
-              <circle cx="130" cy="90" r="8" fill="#ff6b2b" opacity="0.9" />
+              <circle cx="130" cy="90" r="8" fill="#2D5A27" opacity="0.95" />
             </svg>
           </div>
         </div>

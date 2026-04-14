@@ -15,7 +15,7 @@ const steps = [
         href="https://github.com/thealphacubicle/OpenContext"
         target="_blank"
         rel="noopener noreferrer"
-        className="inline-flex items-center gap-2 font-mono text-sm text-[#ff6b2b] hover:underline"
+        className="inline-flex items-center gap-2 font-mono text-sm text-[#2D5A27] hover:underline"
       >
         Fork the repo on GitHub →
       </a>
@@ -105,8 +105,8 @@ function StepAccordion({
   return (
     <div
       style={{
-        background: isOpen ? 'rgba(255,107,43,0.03)' : '#0f0f0f',
-        border: `1px solid ${isOpen ? 'rgba(255,107,43,0.25)' : 'rgba(255,255,255,0.07)'}`,
+        background: isOpen ? 'rgba(29,158,117,0.07)' : '#0f0f0f',
+        border: `1px solid ${isOpen ? 'rgba(29,158,117,0.3)' : 'rgba(255,255,255,0.07)'}`,
         borderRadius: '4px',
         transition: 'border-color 0.2s ease, background 0.2s ease',
       }}
@@ -122,10 +122,10 @@ function StepAccordion({
         <span
           className="flex-shrink-0 flex items-center justify-center w-9 h-9 font-mono font-semibold text-sm"
           style={{
-            border: `1.5px solid ${isOpen ? 'rgba(255,107,43,0.6)' : 'rgba(255,107,43,0.3)'}`,
+            border: `1.5px solid ${isOpen ? 'rgba(29,158,117,0.65)' : 'rgba(232,132,26,0.45)'}`,
             borderRadius: '50%',
-            color: '#ff6b2b',
-            background: isOpen ? 'rgba(255,107,43,0.1)' : 'transparent',
+            color: isOpen ? '#1D9E75' : '#E8841A',
+            background: isOpen ? 'rgba(29,158,117,0.14)' : 'transparent',
             transition: 'border-color 0.2s ease, background 0.2s ease',
             flexShrink: 0,
           }}
@@ -147,7 +147,7 @@ function StepAccordion({
         <span
           className="flex-shrink-0 flex items-center justify-center w-7 h-7 ml-2"
           style={{
-            color: isOpen ? '#ff6b2b' : '#6b7280',
+            color: isOpen ? '#1D9E75' : '#6b7280',
             transform: isOpen ? 'rotate(180deg)' : 'rotate(0deg)',
             transition: 'transform 0.25s ease, color 0.2s ease',
           }}
@@ -199,7 +199,7 @@ export function McpConnectionPage() {
         <div className="section-inner">
           {/* Section heading */}
           <div className="reveal text-center md:text-left mb-12">
-            <p className="font-mono text-xs uppercase tracking-widest text-[#ff6b2b] mb-3">
+            <p className="font-mono text-xs uppercase tracking-widest text-[#E8841A] mb-3">
               The guide
             </p>
             <h2 className="font-fraunces text-4xl md:text-5xl font-light text-white leading-tight">
@@ -226,18 +226,18 @@ export function McpConnectionPage() {
           <div
             className="reveal mt-12 flex items-start gap-4 p-6 max-w-2xl"
             style={{
-              background: 'rgba(255,107,43,0.05)',
-              border: '1px solid rgba(255,107,43,0.2)',
+              background: 'rgba(29,158,117,0.08)',
+              border: '1px solid rgba(29,158,117,0.3)',
               borderRadius: '4px',
             }}
           >
             <span
               className="flex-shrink-0 flex items-center justify-center w-10 h-10"
               style={{
-                background: 'rgba(255,107,43,0.1)',
-                border: '1px solid rgba(255,107,43,0.3)',
+                background: 'rgba(29,158,117,0.16)',
+                border: '1px solid rgba(29,158,117,0.35)',
                 borderRadius: '50%',
-                color: '#ff6b2b',
+                color: '#1D9E75',
               }}
             >
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden>

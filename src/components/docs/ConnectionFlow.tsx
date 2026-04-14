@@ -46,7 +46,7 @@ export function ConnectionFlow() {
     <section className="py-16 md:py-24 border-t border-white/5">
       <div className="section-inner">
         {/* Header */}
-        <p className="reveal font-mono text-xs uppercase tracking-widest text-[#ff6b2b] mb-4">
+        <p className="reveal font-mono text-xs uppercase tracking-widest text-[#E8841A] mb-4">
           How it connects
         </p>
         <h2 className="reveal font-fraunces text-3xl md:text-4xl font-light text-white leading-tight mb-14 max-w-lg">
@@ -69,7 +69,7 @@ export function ConnectionFlow() {
                 {/* Step + icon row */}
                 <div className="flex items-center gap-3 mb-5">
                   <span
-                    className="font-mono text-xs text-[#ff6b2b] flex-shrink-0"
+                    className="font-mono text-xs text-[#E8841A] flex-shrink-0"
                     style={{ letterSpacing: '0.1em' }}
                   >
                     {node.step}
@@ -77,10 +77,10 @@ export function ConnectionFlow() {
                   <span
                     className="flex items-center justify-center w-11 h-11 flex-shrink-0"
                     style={{
-                      background: 'rgba(255,107,43,0.08)',
-                      border: '1px solid rgba(255,107,43,0.2)',
+                      background: 'rgba(232,132,26,0.12)',
+                      border: '1px solid rgba(232,132,26,0.3)',
                       borderRadius: '50%',
-                      color: '#ff6b2b',
+                      color: '#E8841A',
                     }}
                   >
                     {node.icon}
@@ -102,17 +102,17 @@ export function ConnectionFlow() {
                 <>
                   {/* Mobile: vertical */}
                   <div className="flex flex-col items-center py-3 md:hidden" aria-hidden>
-                    <div style={{ width: '2px', height: '32px', background: 'rgba(255,107,43,0.2)' }} />
+                    <div style={{ width: '2px', height: '32px', background: 'rgba(29,158,117,0.3)' }} />
                     <svg width="10" height="8" viewBox="0 0 10 8" fill="none">
-                      <path d="M1 1L5 7L9 1" stroke="rgba(255,107,43,0.5)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                      <path d="M1 1L5 7L9 1" stroke="rgba(29,158,117,0.6)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                     </svg>
                   </div>
 
                   {/* Desktop: horizontal */}
                   <div className="hidden md:flex items-center flex-shrink-0 px-3" aria-hidden>
-                    <div style={{ width: '40px', height: '2px', background: 'rgba(255,107,43,0.2)' }} />
+                    <div style={{ width: '40px', height: '2px', background: 'rgba(29,158,117,0.3)' }} />
                     <svg width="8" height="10" viewBox="0 0 8 10" fill="none" style={{ marginLeft: '-1px' }}>
-                      <path d="M1 1L7 5L1 9" stroke="rgba(255,107,43,0.5)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                      <path d="M1 1L7 5L1 9" stroke="rgba(29,158,117,0.6)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                     </svg>
                   </div>
                 </>

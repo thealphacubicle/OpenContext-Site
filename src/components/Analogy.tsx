@@ -10,7 +10,7 @@ export function Analogy() {
         className="pointer-events-none absolute inset-0"
         style={{
           background:
-            'radial-gradient(ellipse 60% 70% at 50% 50%, rgba(255,107,43,0.05) 0%, transparent 70%)',
+            'radial-gradient(ellipse 60% 70% at 50% 50%, rgba(232,132,26,0.08) 0%, transparent 70%)',
         }}
         aria-hidden
       />
@@ -19,7 +19,7 @@ export function Analogy() {
         <div className="relative flex flex-col items-center text-center max-w-2xl mx-auto">
           {/* Decorative opening quote mark */}
           <span
-            className="absolute font-fraunces leading-none text-[#ff6b2b] select-none pointer-events-none"
+            className="absolute font-fraunces leading-none text-[#E8841A] select-none pointer-events-none"
             style={{
               fontSize: 'clamp(6rem, 15vw, 10rem)',
               opacity: 0.08,
@@ -34,7 +34,7 @@ export function Analogy() {
 
           {/* Decorative closing quote mark */}
           <span
-            className="absolute font-fraunces leading-none text-[#ff6b2b] select-none pointer-events-none"
+            className="absolute font-fraunces leading-none text-[#E8841A] select-none pointer-events-none"
             style={{
               fontSize: 'clamp(6rem, 15vw, 10rem)',
               opacity: 0.08,
@@ -52,7 +52,7 @@ export function Analogy() {
             minutes, query in plain English.
           </blockquote>
 
-          <p className="reveal reveal-delay-1 font-mono text-xs uppercase tracking-widest mt-8 relative z-10" style={{ color: '#ff6b2b' }}>
+          <p className="reveal reveal-delay-1 font-mono text-xs uppercase tracking-widest mt-8 relative z-10" style={{ color: '#E8841A' }}>
             — The OpenContext Principle
           </p>
         </div>

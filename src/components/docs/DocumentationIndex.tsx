@@ -57,21 +57,21 @@ export function DocumentationIndex({ githubUrl }: DocumentationIndexProps) {
 
   const cardInner = (doc: (typeof docLinks)[number]) => (
     <>
-      {/* Top-right orange accent dot — visible on hover */}
+      {/* Top-right accent dot — visible on hover */}
       <span
         className="absolute top-3 right-3 w-1 h-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-        style={{ backgroundColor: '#ff6b2b', borderRadius: '1px' }}
+        style={{ backgroundColor: '#E8841A', borderRadius: '1px' }}
         aria-hidden
       />
 
-      <h3 className="font-fraunces font-semibold text-white text-lg mb-2 group-hover:text-[#ff6b2b] transition-colors pr-6">
+      <h3 className="font-fraunces font-semibold text-white text-lg mb-2 group-hover:text-[#1D9E75] transition-colors pr-6">
         {doc.title}
       </h3>
       <p className="font-sans text-[#9ca3af] text-[15px] leading-relaxed">{doc.description}</p>
 
       {/* Right-arrow slides in on hover */}
       <span
-        className="absolute right-5 top-1/2 -translate-y-1/2 font-mono text-[#ff6b2b] opacity-0 translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300"
+        className="absolute right-5 top-1/2 -translate-y-1/2 font-mono text-[#1D9E75] opacity-0 translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300"
         aria-hidden
       >
         →
@@ -80,13 +80,13 @@ export function DocumentationIndex({ githubUrl }: DocumentationIndexProps) {
   )
 
   const cardClass =
-    'reveal block relative min-h-[100px] p-6 border border-white/8 bg-[#0f0f0f] no-underline transition-all hover:border-[rgba(255,107,43,0.35)] hover:bg-[#111111] group'
+    'reveal block relative min-h-[100px] p-6 border border-white/8 bg-[#0f0f0f] no-underline transition-all hover:border-[rgba(29,158,117,0.35)] hover:bg-[#111111] group'
   const cardStyle = { borderRadius: '2px' } as const
 
   return (
     <section className="section-padding border-t border-white/5">
       <div className="section-inner">
-        <h2 className="reveal font-mono text-xl md:text-2xl font-medium uppercase tracking-wider text-[#ff6b2b] mb-8">
+        <h2 className="reveal font-mono text-xl md:text-2xl font-medium uppercase tracking-wider text-[#E8841A] mb-8">
           Documentation
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">

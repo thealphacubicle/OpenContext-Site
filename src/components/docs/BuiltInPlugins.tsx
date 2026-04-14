@@ -20,14 +20,14 @@ export function BuiltInPlugins() {
   return (
     <section className="section-padding border-t border-white/5">
       <div className="section-inner">
-        <h2 className="reveal font-mono text-xl md:text-2xl font-medium uppercase tracking-wider text-[#ff6b2b] mb-8">
+        <h2 className="reveal font-mono text-xl md:text-2xl font-medium uppercase tracking-wider text-[#E8841A] mb-8">
           Supported platforms
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {platforms.map((platform, i) => (
             <div
               key={platform.name}
-              className={`reveal card-hover reveal-delay-${i + 1} relative p-6 bg-[#0f0f0f] border border-white/8 hover:border-[rgba(255,107,43,0.35)] transition-colors overflow-hidden`}
+              className={`reveal card-hover reveal-delay-${i + 1} relative p-6 bg-[#0f0f0f] border border-white/8 hover:border-[rgba(29,158,117,0.35)] transition-colors overflow-hidden`}
               style={{ borderRadius: '2px' }}
             >
               {/* Live badge */}

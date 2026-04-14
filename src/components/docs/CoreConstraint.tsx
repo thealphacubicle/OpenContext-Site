@@ -8,7 +8,7 @@ export function CoreConstraint() {
         <div className="flex flex-col md:flex-row gap-10 md:gap-16 items-start">
           {/* Left: text (60%) */}
           <div className="reveal flex-1 md:basis-[60%]">
-            <h2 className="font-mono text-xl md:text-2xl font-medium uppercase tracking-wider text-[#ff6b2b] mb-6">
+            <h2 className="font-mono text-xl md:text-2xl font-medium uppercase tracking-wider text-[#E8841A] mb-6">
               Built for simplicity
             </h2>
             <p className="font-fraunces text-2xl md:text-3xl font-light text-white leading-tight mb-6">
@@ -54,7 +54,7 @@ export function CoreConstraint() {
                   >
                     OpenContext
                   </div>
-                  <span className="font-mono text-sm" style={{ color: '#ff6b2b' }}>→</span>
+                  <span className="font-mono text-sm" style={{ color: '#1D9E75' }}>→</span>
                   <div
                     className="font-mono text-xs px-3 py-2 text-white"
                     style={{

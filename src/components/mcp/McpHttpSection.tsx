@@ -32,12 +32,12 @@ export function McpHttpSection() {
           style={{
             border: '1px solid rgba(255,255,255,0.08)',
             borderRadius: '3px',
-            background: open ? 'rgba(255,107,43,0.03)' : 'transparent',
+            background: open ? 'rgba(29,158,117,0.08)' : 'transparent',
           }}
           aria-expanded={open}
         >
           <div className="flex flex-col gap-1">
-            <span className="font-mono text-sm text-[#ff6b2b] uppercase tracking-widest">
+            <span className="font-mono text-sm text-[#E8841A] uppercase tracking-widest">
               For Developers
             </span>
             <span className="font-fraunces text-white text-lg font-light">
@@ -48,9 +48,9 @@ export function McpHttpSection() {
             </span>
           </div>
           <span
-            className="flex-shrink-0 ml-6 w-8 h-8 flex items-center justify-center font-mono text-xl text-[#ff6b2b] transition-transform"
+            className="flex-shrink-0 ml-6 w-8 h-8 flex items-center justify-center font-mono text-xl text-[#1D9E75] transition-transform"
             style={{
-              border: '1px solid rgba(255,107,43,0.25)',
+              border: '1px solid rgba(29,158,117,0.35)',
               borderRadius: '50%',
               transform: open ? 'rotate(45deg)' : 'none',
               transition: 'transform 0.25s ease',

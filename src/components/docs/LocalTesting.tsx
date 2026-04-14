@@ -3,10 +3,10 @@ export function LocalTesting() {
     <section className="section-padding border-t border-white/5">
       <div className="section-inner">
         <div
-          className="max-w-2xl border-l-2 border-[#ff6b2b]/50 pl-6 py-2 bg-[#0f0f0f] pr-6 glow-orange"
+          className="max-w-2xl border-l-2 border-[#2D5A27]/60 pl-6 py-2 bg-[#0f0f0f] pr-6"
           style={{ borderRadius: '0 2px 2px 0' }}
         >
-          <h2 className="font-mono text-lg font-medium uppercase tracking-wider text-[#ff6b2b] mb-3">
+          <h2 className="font-mono text-lg font-medium uppercase tracking-wider text-[#2D5A27] mb-3">
             Local testing
           </h2>
           <p className="font-sans text-[#9ca3af] text-base leading-relaxed">

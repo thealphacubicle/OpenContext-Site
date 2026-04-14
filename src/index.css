@@ -5,9 +5,12 @@
 :root {
   --cream: #050505;
   --navy: #ffffff;
-  --orange: #ff6b2b;
-  --civic-blue: #3b82f6;
-  --amber: #f59e0b;
+  --orange: #E8841A;
+  --civic-blue: #1D9E75;
+  --amber: #E8841A;
+  --brand-accent: #E8841A;
+  --brand-cta: #2D5A27;
+  --brand-active: #1D9E75;
   --border: rgba(255, 255, 255, 0.08);
   --muted: #9ca3af;
   --chip-muted: #1a1a1a;
@@ -88,15 +91,15 @@ body {
 
 /* Glow utilities */
 .glow-orange {
-  box-shadow: 0 0 40px rgba(255, 107, 43, 0.15);
+  box-shadow: 0 0 40px rgba(232, 132, 26, 0.18);
 }
 
 .glow-blue {
-  box-shadow: 0 0 40px rgba(59, 130, 246, 0.15);
+  box-shadow: 0 0 40px rgba(29, 158, 117, 0.18);
 }
 
 .border-glow {
-  border: 1px solid rgba(255, 107, 43, 0.3);
+  border: 1px solid rgba(232, 132, 26, 0.35);
 }
 
 /* Subtle grid background for hero */
@@ -168,12 +171,12 @@ body {
 }
 .card-hover:hover {
   transform: translateY(-3px);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(255, 107, 43, 0.15);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(232, 132, 26, 0.22);
 }
 
 /* ── Gradient text ── */
 .text-gradient {
-  background: linear-gradient(135deg, #ffffff 0%, #ff6b2b 100%);
+  background: linear-gradient(135deg, #ffffff 0%, var(--brand-accent) 50%, var(--brand-active) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -221,8 +224,8 @@ body {
 
 /* ── Glow pulse ── */
 @keyframes glow-pulse {
-  0%, 100% { box-shadow: 0 0 20px rgba(255,107,43,0.1); }
-  50% { box-shadow: 0 0 40px rgba(255,107,43,0.25); }
+  0%, 100% { box-shadow: 0 0 20px rgba(45,90,39,0.15); }
+  50% { box-shadow: 0 0 40px rgba(45,90,39,0.35); }
 }
 .pulse-glow {
   animation: glow-pulse 3s ease-in-out infinite;
@@ -279,7 +282,7 @@ body {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(90deg, transparent, rgba(255,107,43,0.9), transparent);
+  background: linear-gradient(90deg, transparent, rgba(29,158,117,0.9), transparent);
   animation: data-flow 1.8s ease-in-out infinite;
 }
 
@@ -300,5 +303,5 @@ body {
 
 /* ── Timeline step line ── */
 .timeline-line {
-  background: linear-gradient(to bottom, rgba(255,107,43,0.4) 0%, rgba(255,107,43,0.1) 100%);
+  background: linear-gradient(to bottom, rgba(232,132,26,0.45) 0%, rgba(29,158,117,0.2) 100%);
 }

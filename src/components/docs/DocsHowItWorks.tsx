@@ -25,7 +25,7 @@ export function DocsHowItWorks() {
   return (
     <section id="how-it-works" className="section-padding border-t border-white/5">
       <div className="section-inner">
-        <h2 className="reveal font-mono text-xl md:text-2xl font-medium uppercase tracking-wider text-[#ff6b2b] mb-10">
+        <h2 className="reveal font-mono text-xl md:text-2xl font-medium uppercase tracking-wider text-[#E8841A] mb-10">
           How it works
         </h2>
         <div className="relative">
@@ -46,8 +46,8 @@ export function DocsHowItWorks() {
                   <div
                     className="flex items-center justify-center w-8 h-8 font-mono text-sm font-medium relative z-10"
                     style={{
-                      border: '1px solid rgba(255,107,43,0.6)',
-                      color: '#ff6b2b',
+                      border: '1px solid rgba(29,158,117,0.6)',
+                      color: '#1D9E75',
                       backgroundColor: '#050505',
                       borderRadius: '50%',
                     }}
@@ -59,7 +59,7 @@ export function DocsHowItWorks() {
                     <div
                       className="flex-1 w-px mt-2 md:hidden"
                       style={{
-                        background: 'linear-gradient(to bottom, rgba(255,107,43,0.4) 0%, rgba(255,107,43,0.1) 100%)',
+                        background: 'linear-gradient(to bottom, rgba(29,158,117,0.45) 0%, rgba(29,158,117,0.15) 100%)',
                         minHeight: '2rem',
                       }}
                       aria-hidden

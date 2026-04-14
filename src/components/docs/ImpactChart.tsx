@@ -69,7 +69,7 @@ export function ImpactChart() {
   return (
     <section className="section-padding border-t border-white/5 bg-[#0f0f0f]">
       <div className="section-inner">
-        <h2 className="font-mono text-xl md:text-2xl font-medium uppercase tracking-wider text-[#ff6b2b] mb-2">
+        <h2 className="font-mono text-xl md:text-2xl font-medium uppercase tracking-wider text-[#E8841A] mb-2">
           The speed difference is statistically obvious
         </h2>
         <p className="font-sans text-[#9ca3af] text-[15px] mb-8">
@@ -125,16 +125,16 @@ export function ImpactChart() {
               onMouseLeave={() => setHovered(null)}
             />
 
-            {/* "After" curve — orange, filled */}
+            {/* "After" curve — brand CTA, filled */}
             <path
               d={`${afterPath} L${chartX0 + chartWidth},${chartY0} L${chartX0},${chartY0} Z`}
-              fill={hovered === 'before' ? 'rgba(255,107,43,0.06)' : 'rgba(255,107,43,0.12)'}
+              fill={hovered === 'before' ? 'rgba(45,90,39,0.08)' : 'rgba(45,90,39,0.16)'}
               style={{ transition: 'fill 0.25s ease' }}
             />
             <path
               d={afterPath}
               fill="none"
-              stroke={hovered === 'before' ? 'rgba(255,107,43,0.4)' : '#ff6b2b'}
+              stroke={hovered === 'before' ? 'rgba(45,90,39,0.45)' : '#2D5A27'}
               strokeWidth="2.5"
               style={{ transition: 'stroke 0.25s ease' }}
               onMouseEnter={() => setHovered('after')}
@@ -147,14 +147,14 @@ export function ImpactChart() {
               y1={padT + 4}
               x2={afterPeakX}
               y2={chartY0 - chartHeight - 4}
-              stroke="rgba(255,107,43,0.4)"
+              stroke="rgba(45,90,39,0.5)"
               strokeWidth="1"
               strokeDasharray="3 3"
             />
             <text
               x={afterPeakX + 6}
               y={padT + 18}
-              fill="#ff6b2b"
+              fill="#2D5A27"
               fontSize="11"
               fontFamily="monospace"
               letterSpacing="0.5"
@@ -221,9 +221,9 @@ export function ImpactChart() {
             >
               <span
                 className="inline-block w-8 h-0.5"
-                style={{ background: '#ff6b2b' }}
+                style={{ background: '#2D5A27' }}
               />
-              <span className="font-mono text-xs text-[#ff6b2b] uppercase tracking-wider">
+              <span className="font-mono text-xs text-[#2D5A27] uppercase tracking-wider">
                 With OpenContext
               </span>
             </button>

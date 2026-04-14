@@ -20,10 +20,16 @@ export function Nav({ githubUrl }: NavProps) {
         {/* Logo */}
         <NavLink
           to="/home"
-          className="font-fraunces font-semibold text-xl text-white no-underline transition-colors hover:text-orange"
+          className="flex items-center gap-3 no-underline transition-opacity hover:opacity-90"
           onClick={() => setMenuOpen(false)}
+          aria-label="OpenContext home"
         >
-          OpenContext
+          <img
+            src="/logo_no_bg.png"
+            alt="OpenContext logo"
+            className="h-8 w-auto object-contain"
+          />
+          <span className="font-fraunces font-semibold text-xl text-white">OpenContext</span>
         </NavLink>
 
         {/* Desktop nav */}

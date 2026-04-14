@@ -105,7 +105,7 @@ function PlatformCard({
           <div
             className="flip-card-back flip-card-front absolute inset-0 flex items-center overflow-y-auto px-6 py-5"
             style={{
-              backgroundColor: '#ff6b2b',
+              backgroundColor: '#2D5A27',
               borderRadius: '2px',
               minHeight: 120,
             }}
@@ -124,7 +124,7 @@ export function WorksWith() {
   return (
     <section id="works-with" className="section-padding border-t border-white/5">
       <div className="section-inner">
-        <h2 className="reveal font-mono text-xl md:text-2xl font-medium uppercase tracking-wider text-[#ff6b2b] mb-3">
+        <h2 className="reveal font-mono text-xl md:text-2xl font-medium uppercase tracking-wider text-[#E8841A] mb-3">
           Works with
         </h2>
         <p className="reveal font-sans text-[#9ca3af] text-sm mb-10">
@@ -134,7 +134,7 @@ export function WorksWith() {
           <div>
             <h3
               className="reveal font-mono text-base md:text-lg font-medium uppercase tracking-wider text-[#9ca3af] border-b pb-3 mb-5"
-              style={{ borderColor: 'rgba(255,107,43,0.2)' }}
+              style={{ borderColor: 'rgba(232,132,26,0.25)' }}
             >
               Data platforms
             </h3>
@@ -153,7 +153,7 @@ export function WorksWith() {
           <div>
             <h3
               className="reveal font-mono text-base md:text-lg font-medium uppercase tracking-wider text-[#9ca3af] border-b pb-3 mb-5"
-              style={{ borderColor: 'rgba(255,107,43,0.2)' }}
+              style={{ borderColor: 'rgba(232,132,26,0.25)' }}
             >
               Cloud providers
             </h3>

@@ -1,6 +1,6 @@
 const stats = [
   { value: '100+', label: 'datasets made AI-accessible' },
-  { value: '300%', label: 'improvement in employee productivity' },
+  { value: '~4x', label: 'faster MCP deployment to production' },
   { value: '< 15 min', label: 'average setup time' },
 ]
 
@@ -27,18 +27,18 @@ export function Impact() {
       id="impact"
       className="section-padding border-t border-white/5 relative overflow-hidden"
     >
-      {/* Subtle orange glow at top */}
+      {/* Subtle brand glow at top */}
       <div
         className="pointer-events-none absolute top-0 left-0 right-0 h-px"
         style={{
-          background: 'linear-gradient(90deg, transparent, rgba(255,107,43,0.4), transparent)',
+          background: 'linear-gradient(90deg, transparent, rgba(232,132,26,0.5), transparent)',
         }}
         aria-hidden
       />
       <div
         className="pointer-events-none absolute -top-24 left-1/2 -translate-x-1/2 w-96 h-48 rounded-full"
         style={{
-          background: 'radial-gradient(ellipse at center, rgba(255,107,43,0.07) 0%, transparent 70%)',
+          background: 'radial-gradient(ellipse at center, rgba(29,158,117,0.12) 0%, transparent 70%)',
         }}
         aria-hidden
       />
@@ -46,7 +46,7 @@ export function Impact() {
       <div className="section-inner relative z-10">
         {/* Two-line heading */}
         <div className="mb-12">
-          <p className="reveal font-mono text-xl md:text-2xl font-medium uppercase tracking-wider text-[#ff6b2b]">
+          <p className="reveal font-mono text-xl md:text-2xl font-medium uppercase tracking-wider text-[#E8841A]">
             Trusted by
           </p>
           <p className="reveal reveal-delay-1 font-fraunces text-3xl text-white font-light">
@@ -64,15 +64,15 @@ export function Impact() {
             >
               {/* Org name + badge */}
               <div className="flex items-center gap-2 flex-wrap mb-4">
-                <span className="font-mono text-sm font-medium text-[#ff6b2b] uppercase tracking-wider">
+                <span className="font-mono text-sm font-medium text-[#E8841A] uppercase tracking-wider">
                   {t.org}
                 </span>
                 <span
                   className="font-mono text-xs px-2 py-0.5 rounded-full"
                   style={{
-                    backgroundColor: 'rgba(255,107,43,0.12)',
-                    color: '#ff6b2b',
-                    border: '1px solid rgba(255,107,43,0.25)',
+                    backgroundColor: 'rgba(29,158,117,0.14)',
+                    color: '#1D9E75',
+                    border: '1px solid rgba(29,158,117,0.3)',
                   }}
                 >
                   {t.badge}

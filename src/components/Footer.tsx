@@ -9,6 +9,14 @@ export function Footer({ githubUrl }: FooterProps) {
   return (
     <footer className="border-t border-white/5" style={{ backgroundColor: '#0a0a0a' }}>
       <div className="container-main py-10 md:py-12">
+        <div className="flex items-center gap-3 mb-6">
+          <img
+            src="/logo_no_bg.png"
+            alt="OpenContext logo"
+            className="h-9 w-auto object-contain"
+          />
+          <span className="font-fraunces text-xl text-white">OpenContext</span>
+        </div>
         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 font-mono text-sm text-[#9ca3af] mb-6">
           <span className="max-w-xl">OpenContext — Open source template for government open data</span>
           <div className="flex flex-wrap gap-6 shrink-0">

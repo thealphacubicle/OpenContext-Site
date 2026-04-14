@@ -16,7 +16,7 @@ export function McpSetupSection({
   return (
     <section id={id} className="section-padding border-t border-white/5">
       <div className="section-inner">
-        <h2 className="font-mono text-xl md:text-2xl font-medium uppercase tracking-wider text-[#ff6b2b] mb-2">
+        <h2 className="font-mono text-xl md:text-2xl font-medium uppercase tracking-wider text-[#E8841A] mb-2">
           {title}
         </h2>
         <p className="font-sans text-[#9ca3af] text-sm mb-10">{timeEstimate}</p>
@@ -34,7 +34,7 @@ export function McpSetupSection({
 
         {troubleshooting && troubleshooting.length > 0 && (
           <div className="mt-12 pt-8 border-t border-white/5">
-            <h3 className="font-mono text-sm font-medium uppercase tracking-wider text-[#ff6b2b] mb-4">
+            <h3 className="font-mono text-sm font-medium uppercase tracking-wider text-[#E8841A] mb-4">
               Something went wrong?
             </h3>
             <ul className="space-y-3">
