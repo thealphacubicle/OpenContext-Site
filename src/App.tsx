@@ -47,7 +47,7 @@ function App() {
   }, [location.pathname])
 
   return (
-    <main className="min-h-screen flex flex-col">
+    <main className="min-h-screen flex flex-col bg-surface text-ink-body">
       <Nav githubUrl={GITHUB_URL} />
       <Routes>
         <Route path="/" element={<Navigate to="/home" replace />} />

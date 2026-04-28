@@ -1,19 +1,14 @@
 export function LocalTesting() {
   return (
-    <section className="section-padding border-t border-white/5">
+    <section className="section-padding border-t border-line bg-surface">
       <div className="section-inner">
-        <div
-          className="max-w-2xl border-l-2 border-[#ff6b2b]/50 pl-6 py-2 bg-[#0f0f0f] pr-6 glow-orange"
-          style={{ borderRadius: '0 2px 2px 0' }}
-        >
-          <h2 className="font-mono text-lg font-medium uppercase tracking-wider text-[#ff6b2b] mb-3">
+        <div className="max-w-2xl border-l-4 border-action pl-6 py-4 bg-surface-muted pr-6 rounded-r-md">
+          <h2 className="font-heading font-bold text-base uppercase tracking-wider text-action mb-3">
             Local testing
           </h2>
-          <p className="font-sans text-[#9ca3af] text-base leading-relaxed">
-            Before deploying to production, run a local server. Test your plugin logic against it using standard
-            HTTP tools — curl, Postman, or any client that speaks JSON-RPC. Iterate quickly and build
-            confidence that your configuration works. Only when you&apos;re ready, run the deploy script and
-            push to your infrastructure.
+          <p className="font-sans text-ink-body text-base leading-relaxed">
+            Before production, run a local server. Exercise your plugin with curl, Postman, or any JSON-RPC client.
+            When behavior matches expectations, run the deploy script and promote to your cloud environment.
           </p>
         </div>
       </div>

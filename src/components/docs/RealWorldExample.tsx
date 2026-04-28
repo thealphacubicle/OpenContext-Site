@@ -12,72 +12,47 @@ export function RealWorldExample({ githubUrl }: RealWorldExampleProps) {
   const examplesUrl = `${githubUrl}/tree/main/examples`
 
   return (
-    <section className="section-padding border-t border-white/5">
+    <section className="section-padding border-t border-line bg-surface-muted">
       <div className="section-inner">
-        <h2 className="reveal font-mono text-xl md:text-2xl font-medium uppercase tracking-wider text-[#ff6b2b] mb-8">
-          Real-world example
-        </h2>
+        <h2 className="reveal eyebrow text-xl md:text-2xl mb-8">Real-world example</h2>
 
         <div className="flex flex-col md:flex-row gap-8 md:gap-12 items-start">
-          {/* Left: text + button (60%) */}
           <div className="reveal flex-1 md:basis-[58%]">
-            <div
-              className="p-6 md:p-8 bg-[#0f0f0f] border border-white/8 h-full"
-              style={{ borderRadius: '2px' }}
-            >
+            <div className="p-6 md:p-8 bg-surface border border-line h-full rounded-card shadow-card">
               <div className="flex items-center gap-2 mb-4">
-                <span className="text-lg" aria-hidden>&#127963;</span>
-                <span className="font-mono text-sm text-[#ff6b2b] font-medium uppercase tracking-wider">
+                <span className="font-heading font-bold text-xs text-boston-charles uppercase tracking-wider">
                   City of Boston
                 </span>
               </div>
-              <p className="font-sans text-[#9ca3af] text-base leading-relaxed mb-6">
-                OpenContext powers Boston&apos;s open data portal. The pattern is simple: point it at your CKAN URL,
-                deploy, done. No custom code.
+              <p className="font-sans text-ink-body text-base leading-relaxed mb-6">
+                Boston&apos;s open data team uses this pattern: point OpenContext at CKAN, deploy, validate. The same
+                workflow scales to other CKAN cities without fork-specific glue code.
               </p>
               <a
                 href={examplesUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block px-6 py-3 bg-[#ff6b2b] text-black text-sm font-mono font-medium uppercase tracking-wider no-underline transition-opacity hover:opacity-90"
-                style={{ borderRadius: '2px' }}
+                className="btn-primary"
               >
                 View examples in repo
               </a>
             </div>
           </div>
 
-          {/* Right: example queries (40%) */}
           <div className="reveal reveal-delay-2 shrink-0 md:basis-[38%] w-full">
-            <p className="font-mono text-xs uppercase tracking-widest text-[#6b7280] mb-4">
+            <p className="font-mono text-xs uppercase tracking-widest text-ink-muted mb-4">
               Example AI queries
             </p>
             <ul className="space-y-3">
               {exampleQueries.map((query) => (
                 <li
                   key={query}
-                  className="flex items-start gap-3 border-l-2 pl-3"
-                  style={{ borderColor: 'rgba(255,107,43,0.3)' }}
+                  className="flex items-start gap-3 border-l-2 border-action/35 pl-3"
                 >
-                  {/* Orange question mark icon */}
-                  <span
-                    className="shrink-0 font-mono text-sm font-bold mt-px"
-                    style={{ color: '#ff6b2b' }}
-                    aria-hidden
-                  >
+                  <span className="shrink-0 font-mono text-sm font-bold mt-px text-action" aria-hidden>
                     ?
                   </span>
-                  <span
-                    className="font-mono text-xs leading-relaxed"
-                    style={{
-                      color: '#9ca3af',
-                      backgroundColor: 'rgba(255,255,255,0.03)',
-                      border: '1px solid rgba(255,255,255,0.07)',
-                      padding: '6px 10px',
-                      borderRadius: '2px',
-                      display: 'block',
-                    }}
-                  >
+                  <span className="font-mono text-xs leading-relaxed text-ink-body bg-surface-muted border border-line px-2.5 py-1.5 rounded-cta block">
                     {query}
                   </span>
                 </li>

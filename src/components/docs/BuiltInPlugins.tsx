@@ -18,45 +18,33 @@ const platforms = [
 
 export function BuiltInPlugins() {
   return (
-    <section className="section-padding border-t border-white/5">
+    <section className="section-padding border-t border-line bg-surface">
       <div className="section-inner">
-        <h2 className="reveal font-mono text-xl md:text-2xl font-medium uppercase tracking-wider text-[#ff6b2b] mb-8">
-          Supported platforms
-        </h2>
+        <h2 className="reveal eyebrow text-xl md:text-2xl mb-8">Supported platforms</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {platforms.map((platform, i) => (
             <div
               key={platform.name}
-              className={`reveal card-hover reveal-delay-${i + 1} relative p-6 bg-[#0f0f0f] border border-white/8 hover:border-[rgba(255,107,43,0.35)] transition-colors overflow-hidden`}
-              style={{ borderRadius: '2px' }}
+              className={`reveal card-hover reveal-delay-${i + 1} relative p-6 bg-surface-muted border border-line hover:border-action/40 transition-colors overflow-hidden rounded-card shadow-card`}
             >
-              {/* Live badge */}
               <div className="absolute top-3 right-3">
-                <span
-                  className="font-mono text-xs px-2 py-0.5 rounded-full"
-                  style={{
-                    backgroundColor: 'rgba(34,197,94,0.15)',
-                    color: '#4ade80',
-                    border: '1px solid rgba(34,197,94,0.25)',
-                  }}
-                >
+                <span className="font-mono text-xs px-2 py-0.5 rounded-full bg-action-muted text-action border border-action/25">
                   Live
                 </span>
               </div>
 
-              {/* Faded background abbreviation */}
               <span
-                className="absolute bottom-2 right-3 font-mono font-bold text-white leading-none select-none pointer-events-none"
-                style={{ fontSize: '4rem', opacity: 0.04 }}
+                className="absolute bottom-2 right-3 font-mono font-bold text-boston-charles leading-none select-none pointer-events-none"
+                style={{ fontSize: '4rem', opacity: 0.06 }}
                 aria-hidden
               >
                 {platform.abbr}
               </span>
 
-              <h3 className="font-fraunces font-semibold text-white text-lg mb-2 relative z-10">
+              <h3 className="font-heading font-extrabold text-boston-charles text-lg mb-2 relative z-10 uppercase tracking-tight">
                 {platform.name}
               </h3>
-              <p className="font-sans text-[#9ca3af] text-[15px] leading-relaxed relative z-10">
+              <p className="font-sans text-ink-body text-[15px] leading-relaxed relative z-10">
                 {platform.benefit}
               </p>
             </div>
