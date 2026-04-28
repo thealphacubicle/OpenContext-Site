@@ -1,3 +1,7 @@
+const accent = '#1871bd'
+const accentMuted = 'rgba(24, 113, 189, 0.35)'
+const warmAccent = 'rgba(24, 113, 189, 0.15)'
+
 const nodes = [
   {
     icon: (
@@ -8,10 +12,10 @@ const nodes = [
       </svg>
     ),
     step: '01',
-    title: 'Your City\'s Data Portal',
+    title: 'Your city\'s data portal',
     subtitle: 'CKAN · ArcGIS · Socrata',
     description:
-      'Your city already hosts open datasets online — permits, 311 requests, budgets, and more. OpenContext works with the most common government data platforms. Nothing about your existing setup needs to change.',
+      'Your city already hosts open datasets online. OpenContext works with common government platforms. Your existing catalog stays the source of truth.',
   },
   {
     icon: (
@@ -25,7 +29,7 @@ const nodes = [
     title: 'OpenContext',
     subtitle: 'Runs on AWS · Always available',
     description:
-      'A lightweight server that acts as a secure bridge. It translates questions from AI assistants into data portal queries, then returns the results in a format AI can understand. Your data never moves until explicitly requested — and only to answer that specific question.',
+      'A lightweight bridge translates questions from AI into data portal queries, then returns results the assistant can use. Data moves only when needed for the question you asked.',
   },
   {
     icon: (
@@ -37,82 +41,61 @@ const nodes = [
     title: 'Claude AI',
     subtitle: 'Any MCP-compatible assistant',
     description:
-      'Once connected, Claude can search your datasets and answer questions in plain English — no SQL, no dashboards, no data exports. Ask "How many potholes were reported last month?" and get a direct answer drawn from live city data.',
+      'Once connected, the assistant searches datasets and answers in plain language. Ask how many potholes were reported last month and get an answer from live data.',
   },
 ]
 
 export function ConnectionFlow() {
   return (
-    <section className="py-16 md:py-24 border-t border-white/5">
+    <section className="py-16 md:py-24 border-t border-line bg-surface">
       <div className="section-inner">
-        {/* Header */}
-        <p className="reveal font-mono text-xs uppercase tracking-widest text-[#E8841A] mb-4">
-          How it connects
-        </p>
-        <h2 className="reveal font-fraunces text-3xl md:text-4xl font-light text-white leading-tight mb-14 max-w-lg">
-          Three pieces. One seamless pipeline.
+        <p className="reveal eyebrow mb-4">How it connects</p>
+        <h2 className="reveal font-heading font-extrabold text-2xl md:text-4xl text-boston-charles leading-tight mb-14 max-w-lg uppercase tracking-tight">
+          Three pieces. One pipeline.
         </h2>
 
-        {/* Flow */}
         <div className="flex flex-col md:flex-row items-stretch gap-4 md:gap-0">
           {nodes.map((node, i) => (
             <div key={node.step} className="flex flex-col md:flex-row items-stretch flex-1">
-              {/* Node card */}
               <div
-                className={`reveal reveal-delay-${i + 1} flex-1 flex flex-col p-6 md:p-8`}
-                style={{
-                  background: '#0f0f0f',
-                  border: '1px solid rgba(255,255,255,0.08)',
-                  borderRadius: '4px',
-                }}
+                className={`reveal reveal-delay-${i + 1} flex-1 flex flex-col p-6 md:p-8 bg-surface-muted border border-line rounded-card shadow-card`}
               >
-                {/* Step + icon row */}
                 <div className="flex items-center gap-3 mb-5">
                   <span
-                    className="font-mono text-xs text-[#E8841A] flex-shrink-0"
-                    style={{ letterSpacing: '0.1em' }}
+                    className="font-heading font-bold text-xs text-boston-optimistic flex-shrink-0 tracking-widest"
                   >
                     {node.step}
                   </span>
                   <span
-                    className="flex items-center justify-center w-11 h-11 flex-shrink-0"
-                    style={{
-                      background: 'rgba(232,132,26,0.12)',
-                      border: '1px solid rgba(232,132,26,0.3)',
-                      borderRadius: '50%',
-                      color: '#E8841A',
-                    }}
+                    className="flex items-center justify-center w-11 h-11 flex-shrink-0 text-boston-optimistic rounded-full border border-boston-optimistic/35"
+                    style={{ backgroundColor: warmAccent }}
                   >
                     {node.icon}
                   </span>
                 </div>
 
-                {/* Text */}
-                <p className="font-fraunces text-white font-semibold text-lg mb-1 leading-snug">
+                <p className="font-heading font-extrabold text-boston-charles text-lg mb-1 leading-snug uppercase tracking-tight">
                   {node.title}
                 </p>
-                <p className="font-mono text-xs text-[#6b7280] mb-4">{node.subtitle}</p>
-                <p className="font-sans text-[#9ca3af] text-sm leading-relaxed flex-1">
+                <p className="font-mono text-xs text-ink-muted mb-4">{node.subtitle}</p>
+                <p className="font-sans text-ink-body text-sm leading-relaxed flex-1">
                   {node.description}
                 </p>
               </div>
 
-              {/* Connector arrow (between nodes only) */}
               {i < nodes.length - 1 && (
                 <>
-                  {/* Mobile: vertical */}
                   <div className="flex flex-col items-center py-3 md:hidden" aria-hidden>
-                    <div style={{ width: '2px', height: '32px', background: 'rgba(29,158,117,0.3)' }} />
+                    <div style={{ width: '2px', height: '32px', background: accentMuted }} />
                     <svg width="10" height="8" viewBox="0 0 10 8" fill="none">
-                      <path d="M1 1L5 7L9 1" stroke="rgba(29,158,117,0.6)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                      <path d="M1 1L5 7L9 1" stroke={accent} strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" opacity="0.7" />
                     </svg>
                   </div>
 
-                  {/* Desktop: horizontal */}
                   <div className="hidden md:flex items-center flex-shrink-0 px-3" aria-hidden>
-                    <div style={{ width: '40px', height: '2px', background: 'rgba(29,158,117,0.3)' }} />
+                    <div style={{ width: '40px', height: '2px', background: accentMuted }} />
                     <svg width="8" height="10" viewBox="0 0 8 10" fill="none" style={{ marginLeft: '-1px' }}>
-                      <path d="M1 1L7 5L1 9" stroke="rgba(29,158,117,0.6)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                      <path d="M1 1L7 5L1 9" stroke={accent} strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" opacity="0.7" />
                     </svg>
                   </div>
                 </>
@@ -121,9 +104,9 @@ export function ConnectionFlow() {
           ))}
         </div>
 
-        {/* Footer note */}
-        <p className="reveal reveal-delay-4 font-sans text-xs text-[#6b7280] mt-10 max-w-md leading-relaxed">
-          OpenContext is a read-only bridge — it can query your data, but cannot write, edit, or delete anything in your portal.
+        <p className="reveal reveal-delay-4 font-sans text-xs text-ink-muted mt-10 max-w-md leading-relaxed">
+          OpenContext is read-only at the portal: it queries public data. It does not write, edit, or delete catalog
+          records.
         </p>
       </div>
     </section>

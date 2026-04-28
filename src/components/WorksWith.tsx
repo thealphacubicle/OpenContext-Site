@@ -42,14 +42,12 @@ function PlatformCard({
   if (!live) {
     return (
       <div
-        className={`reveal ${delayClass} relative flex min-h-[120px] items-center justify-between px-6 py-5 border border-white/8 bg-[#0f0f0f] transition-colors hover:border-white/20`}
-        style={{ borderRadius: '2px' }}
+        className={`reveal ${delayClass} relative flex min-h-[120px] items-center justify-between px-6 py-5 border border-line bg-surface-muted transition-colors hover:border-boston-blueMuted rounded-card`}
       >
-        <span className="font-mono text-lg font-medium text-[#6b7280]">{name}</span>
-        <span
-          className="font-mono text-xs px-2 py-1 rounded-full"
-          style={{ backgroundColor: '#1a1a1a', color: '#6b7280' }}
-        >
+        <span className="font-heading text-sm font-bold uppercase tracking-wider text-ink-muted">
+          {name}
+        </span>
+        <span className="font-mono text-xs px-2 py-1 rounded-full bg-boston-grayWash text-ink-muted border border-line">
           Coming soon
         </span>
       </div>
@@ -58,59 +56,40 @@ function PlatformCard({
 
   return (
     <>
-      {/* Mobile: static card with description always visible */}
       <div
-        className={`reveal ${delayClass} md:hidden border border-white/8 bg-[#0f0f0f] px-5 py-4`}
-        style={{ borderRadius: '2px' }}
+        className={`reveal ${delayClass} md:hidden border border-line bg-surface px-5 py-4 rounded-card shadow-card`}
       >
         <div className="flex items-center justify-between mb-2">
-          <span className="font-mono text-base font-medium text-white">{name}</span>
-          <span
-            className="font-mono text-xs px-2 py-1 rounded-full"
-            style={{
-              backgroundColor: 'rgba(34, 197, 94, 0.15)',
-              color: '#22c55e',
-              border: '1px solid rgba(34, 197, 94, 0.25)',
-            }}
-          >
+          <span className="font-heading text-sm font-bold uppercase tracking-wider text-boston-charles">
+            {name}
+          </span>
+          <span className="font-mono text-xs px-2 py-1 rounded-full bg-action-muted text-action border border-action/30">
             Live
           </span>
         </div>
         {description && (
-          <p className="font-sans text-sm leading-relaxed text-[#9ca3af]">{description}</p>
+          <p className="font-sans text-sm leading-relaxed text-ink-body">{description}</p>
         )}
       </div>
 
-      {/* Desktop: flip card on hover */}
       <div className={`reveal ${delayClass} hidden md:block flip-card-container relative h-[120px]`}>
         <div className="flip-card-inner relative h-full w-full">
-          {/* Front */}
           <div
-            className="flip-card-front absolute inset-0 flex items-center justify-between border border-white/8 bg-[#0f0f0f] px-6 py-5 text-white"
-            style={{ borderRadius: '2px' }}
+            className="flip-card-front absolute inset-0 flex items-center justify-between border border-line bg-surface px-6 py-5 text-boston-charles rounded-card shadow-card"
           >
-            <span className="font-mono text-lg font-medium">{name}</span>
-            <span
-              className="font-mono text-xs px-2 py-1 rounded-full"
-              style={{
-                backgroundColor: 'rgba(34, 197, 94, 0.15)',
-                color: '#22c55e',
-                border: '1px solid rgba(34, 197, 94, 0.25)',
-              }}
-            >
+            <span className="font-heading text-sm font-bold uppercase tracking-wider">{name}</span>
+            <span className="font-mono text-xs px-2 py-1 rounded-full bg-action-muted text-action border border-action/30">
               Live
             </span>
           </div>
-          {/* Back */}
           <div
-            className="flip-card-back flip-card-front absolute inset-0 flex items-center overflow-y-auto px-6 py-5"
+            className="flip-card-back flip-card-front absolute inset-0 flex items-center overflow-y-auto px-6 py-5 rounded-card"
             style={{
-              backgroundColor: '#2D5A27',
-              borderRadius: '2px',
+              backgroundColor: '#1871bd',
               minHeight: 120,
             }}
           >
-            <p className="font-sans text-sm leading-relaxed text-black font-medium">
+            <p className="font-sans text-sm leading-relaxed text-white font-medium">
               {description ?? ''}
             </p>
           </div>
@@ -122,20 +101,15 @@ function PlatformCard({
 
 export function WorksWith() {
   return (
-    <section id="works-with" className="section-padding border-t border-white/5">
+    <section id="works-with" className="section-padding border-t border-line bg-surface">
       <div className="section-inner">
-        <h2 className="reveal font-mono text-xl md:text-2xl font-medium uppercase tracking-wider text-[#E8841A] mb-3">
-          Works with
-        </h2>
-        <p className="reveal font-sans text-[#9ca3af] text-sm mb-10">
-          Hover to learn more about each integration.
+        <h2 className="reveal eyebrow text-xl md:text-2xl mb-3">Works with</h2>
+        <p className="reveal font-sans text-ink-body text-sm mb-10">
+          Hover a card on desktop to read how each integration behaves.
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16">
           <div>
-            <h3
-              className="reveal font-mono text-base md:text-lg font-medium uppercase tracking-wider text-[#9ca3af] border-b pb-3 mb-5"
-              style={{ borderColor: 'rgba(232,132,26,0.25)' }}
-            >
+            <h3 className="reveal font-heading text-sm md:text-base font-bold uppercase tracking-wider text-ink-muted border-b border-boston-optimistic/30 pb-3 mb-5">
               Data platforms
             </h3>
             <div className="flex flex-col gap-3">
@@ -151,10 +125,7 @@ export function WorksWith() {
             </div>
           </div>
           <div>
-            <h3
-              className="reveal font-mono text-base md:text-lg font-medium uppercase tracking-wider text-[#9ca3af] border-b pb-3 mb-5"
-              style={{ borderColor: 'rgba(232,132,26,0.25)' }}
-            >
+            <h3 className="reveal font-heading text-sm md:text-base font-bold uppercase tracking-wider text-ink-muted border-b border-boston-optimistic/30 pb-3 mb-5">
               Cloud providers
             </h3>
             <div className="flex flex-col gap-3">

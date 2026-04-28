@@ -7,7 +7,7 @@ const steps = [
   {
     num: '02',
     title: 'OpenContext wraps it',
-    desc: 'Fork the repo, edit one config file, and deploy to your cloud in minutes.',
+    desc: 'Fork the repo. Use the OpenContext CLI to setup, authenticate, and manage your MCP deployment. Go live in minutes.',
   },
   {
     num: '03',
@@ -18,68 +18,56 @@ const steps = [
 
 export function HowItWorks() {
   return (
-    <section id="how-it-works" className="reveal section-padding border-t border-white/5">
+    <section id="how-it-works" className="reveal section-padding border-t border-line bg-surface-muted">
       <div className="section-inner">
-        <h2 className="reveal font-mono text-xl md:text-2xl font-medium uppercase tracking-wider text-[#E8841A] mb-12">
-          How it works
-        </h2>
+        <h2 className="reveal eyebrow text-xl md:text-2xl mb-12">How it works</h2>
 
-        {/* Desktop: horizontal flow with arrows; Mobile: stacked */}
         <div className="flex flex-col md:flex-row md:items-stretch gap-0">
           {steps.map((step, i) => (
             <div key={step.num} className="flex md:flex-1 flex-col md:flex-row items-stretch">
-              {/* Card */}
               <div
-                className={`reveal card-hover reveal-delay-${i + 1} relative flex-1 p-8 bg-[#0f0f0f] border border-white/8 transition-colors hover:border-[rgba(29,158,117,0.35)] group overflow-hidden`}
-                style={{ borderRadius: '2px' }}
+                className={`reveal card-hover reveal-delay-${i + 1} relative flex-1 p-8 bg-surface border border-line transition-colors hover:border-action rounded-card group overflow-hidden shadow-card`}
               >
-                {/* Top accent line — scales from 0 to 100% on hover */}
                 <div
-                  className="absolute top-0 left-0 h-[2px] w-0 group-hover:w-full transition-all duration-500 ease-out"
-                  style={{ background: '#2D5A27' }}
+                  className="absolute top-0 left-0 h-0.5 w-0 group-hover:w-full transition-all duration-500 ease-out bg-boston-optimistic"
                   aria-hidden
                 />
 
-                {/* Watermark step number */}
                 <span
-                  className="absolute top-2 right-3 font-mono font-bold leading-none text-white select-none pointer-events-none"
-                  style={{ fontSize: '5rem', opacity: 0.07 }}
+                  className="absolute top-2 right-3 font-mono font-bold leading-none text-boston-charles select-none pointer-events-none"
+                  style={{ fontSize: '5rem', opacity: 0.06 }}
                   aria-hidden
                 >
                   {step.num}
                 </span>
 
-                {/* Visible step number */}
                 <span
-                  className="block font-mono font-light leading-none text-[#E8841A] mb-4 opacity-40 group-hover:opacity-70 transition-all duration-500"
-                  style={{ fontSize: '1.5rem' }}
+                  className="block font-heading font-bold leading-none text-boston-optimistic mb-4 opacity-50 group-hover:opacity-90 transition-all duration-500 text-2xl"
                   aria-hidden
                 >
                   {step.num}
                 </span>
 
-                <h3 className="font-fraunces font-semibold text-white text-lg mb-3 relative z-10">
+                <h3 className="font-heading font-extrabold text-boston-charles text-lg mb-3 relative z-10 uppercase tracking-tight">
                   {step.title}
                 </h3>
-                <p className="font-sans text-[#9ca3af] text-[15px] leading-relaxed relative z-10">
+                <p className="font-sans text-ink-body text-[15px] leading-relaxed relative z-10">
                   {step.desc}
                 </p>
               </div>
 
-              {/* Arrow connector between cards (not after last) */}
               {i < steps.length - 1 && (
                 <div className="flex items-center justify-center md:w-10 py-4 md:py-0 shrink-0">
-                  {/* Vertical arrow on mobile, horizontal on desktop */}
                   <span
-                    className="font-mono font-light md:hidden"
-                    style={{ color: '#1D9E75', opacity: 0.6, fontSize: '1.2rem' }}
+                    className="font-mono font-light md:hidden text-action opacity-70"
+                    style={{ fontSize: '1.2rem' }}
                     aria-hidden
                   >
                     ↓
                   </span>
                   <span
-                    className="font-mono font-light hidden md:block"
-                    style={{ color: '#1D9E75', opacity: 0.6, fontSize: '1.4rem' }}
+                    className="font-mono font-light hidden md:block text-action opacity-70"
+                    style={{ fontSize: '1.4rem' }}
                     aria-hidden
                   >
                     →
