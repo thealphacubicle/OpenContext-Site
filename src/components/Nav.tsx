@@ -9,6 +9,7 @@ const navLinks = [
   { to: '/home', label: 'HOME' },
   { to: '/how-it-works', label: 'ABOUT OPENCONTEXT' },
   { to: '/connect', label: 'CONNECT' },
+  { to: '/bulletin', label: 'BULLETIN' },
 ]
 
 export function Nav({ githubUrl }: NavProps) {
