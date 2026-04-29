@@ -1,6 +1,6 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node';
 import { randomUUID } from 'node:crypto';
-import { corsOptions, parseRequestJson, redis, sendJson } from './_utils';
+import { corsOptions, parseRequestJson, redis, sendJson } from './_utils.js';
 
 type SubscribeBody = {
   webhook_url: string;

@@ -6,7 +6,7 @@ import {
   parseSubscriberRow,
   redis,
   sendJson,
-} from './_utils';
+} from './_utils.js';
 
 type PublishBody = {
   commits: string[];
